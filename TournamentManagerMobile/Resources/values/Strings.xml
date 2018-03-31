@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Tournament Organizer</string>
+  <string-array name="dropdownType">
+    
+    <item> choose an item </item>
+    
+    <item> League </item>
+  </string-array>
+
+  <string-array name ="numOfDropDown">
+    <item>choose an item</item>
+    <item> one </item>
+    <item> two </item>
+  </string-array>
+
+  <string-array name ="statistics">
+    <item> This tournament </item>
+    <item> All tournaments </item>
+  </string-array>
+
+
+  <string name="banner_ad_unit_id">ca-app-pub-5385963311823976/6913037454</string>
+  
+  
+</resources>

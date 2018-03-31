@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.antundelinger.tournamentorganizer" android:installLocation="auto" android:versionName="1.1" android:versionCode="2">
+	<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="27" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<application android:allowBackup="true" android:label="@string/app_name" android:icon="@drawable/icon11"></application>
+</manifest>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <MediaController
+        android:minWidth="25px"
+        android:minHeight="150px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mediaController1"
+        android:background="#34495e">
+        <ImageView
+            android:src="@drawable/HMfftablerow128307998"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/imageView1"
+            android:clickable="false"
+            android:layout_gravity="center" />
+    </MediaController>
+    <TextView
+        android:id="@+id/labelOrdNumber"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/mediaController1"
+        android:text=" " />
+    <TextView
+        android:id="@+id/Name"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/mediaController1"
+        android:layout_marginLeft="12dip"
+        android:layout_toRightOf="@id/labelOrdNumber"
+        android:text="Name" />
+    <TextView
+        android:id="@+id/labelGP"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/mediaController1"
+        android:layout_marginLeft="105dip"
+        android:layout_toRightOf="@id/labelOrdNumber"
+        android:text="G" />
+    <TextView
+        android:id="@+id/labelWon"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/mediaController1"
+        android:layout_marginLeft="135dip"
+        android:layout_toRightOf="@id/labelOrdNumber"
+        android:text="WON" />
+    <TextView
+        android:id="@+id/labelDRAW"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/mediaController1"
+        android:layout_marginLeft="180dip"
+        android:layout_toRightOf="@id/labelOrdNumber"
+        android:text="DRAW" />
+    <TextView
+        android:id="@+id/labelLOST"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/mediaController1"
+        android:layout_marginLeft="230dip"
+        android:layout_toRightOf="@id/labelOrdNumber"
+        android:text="LOST" />
+    <TextView
+        android:id="@+id/labelGD"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/mediaController1"
+        android:layout_marginLeft="285dip"
+        android:layout_toRightOf="@id/labelOrdNumber"
+        android:text="GD" />
+    <TextView
+        android:id="@+id/labelPTS"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/mediaController1"
+        android:layout_marginLeft="330dip"
+        android:layout_toRightOf="@id/labelOrdNumber"
+        android:text="PTS" />
+    <ListView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="430dip"
+        android:layout_below="@id/labelOrdNumber"
+        android:id="@+id/tableList" />
+    <com.startapp.android.publish.banner.Banner
+        android:id="@+id/tableBanner"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_below="@id/tableList" />
+</RelativeLayout>

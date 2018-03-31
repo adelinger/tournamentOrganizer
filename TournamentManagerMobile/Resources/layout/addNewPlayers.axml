@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:id="@+id/linearLayout1">
+    <AutoCompleteTextView
+        android:id="@+id/addName"
+        android:hint="Player nickname"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_weight="0" />
+    <AutoCompleteTextView
+        android:id="@+id/addClub"
+        android:hint="Club name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_weight="0" />
+    <Button
+        android:text="Add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addButton"
+        android:background="#2c3e50"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textColor="@android:color/background_light" />
+    <ListView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listViewPlayers"
+        android:layout_weight="1" />
+    <Button
+        android:text="Start tournament"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/startTournamentButton"
+        android:background="#2c3e50"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textColor="@android:color/background_light" />
+    <com.startapp.android.publish.banner.Banner
+        android:id="@+id/addNewPlayersBanner"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.05"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10px" />
+</LinearLayout>

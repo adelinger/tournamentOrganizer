@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <MediaController
+        android:minWidth="25px"
+        android:minHeight="150px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mediaController1"
+        android:background="#34495e">
+        <ImageView
+            android:src="@drawable/ifKicon16medal314373"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/imageView1"
+            android:clickable="false"
+            android:layout_gravity="center" />
+    </MediaController>
+    <AutoCompleteTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mediaController1"
+        android:id="@+id/scorerNameText"
+        android:hint="Player name" />
+    <TextView
+        android:id="@+id/numOfGoalsText"
+        android:layout_below="@id/scorerNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dip"
+        android:textSize="40dip"
+        android:width="40dip"
+        android:gravity="center" />
+    <Button
+        android:id="@+id/plusIncrementGoal"
+        android:layout_below="@id/scorerNameText"
+        android:layout_toLeftOf="@id/numOfGoalsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dip"
+        android:text="+"
+        android:textSize="20dip"
+        android:background="#2c3e50"
+        android:textColor="@android:color/background_light" />
+    <Button
+        android:id="@+id/decrementGoal"
+        android:layout_below="@id/scorerNameText"
+        android:layout_toRightOf="@id/numOfGoalsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dip"
+        android:text="-"
+        android:textSize="20dip"
+        android:background="#2c3e50"
+        android:textColor="@android:color/background_light" />
+    <Button
+        android:id="@+id/applyButton"
+        android:layout_below="@id/decrementGoal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dip"
+        android:text="Add goals"
+        android:background="#2c3e50"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/background_light" />
+    <ListView
+        android:id="@+id/playersList"
+        android:layout_below="@id/applyButton"
+        android:layout_width="match_parent"
+        android:layout_height="250dip"
+        android:layout_marginTop="15dip" />
+    <com.startapp.android.publish.banner.Banner
+        android:id="@+id/goalScorerBanner"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_below="@id/playersList" />
+</RelativeLayout>

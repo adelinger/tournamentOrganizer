@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ecf0f1">
+    <Spinner
+        android:entries="@array/statistics"
+        android:layout_width="match_parent"
+        android:layout_height="120px"
+        android:id="@+id/statSpinner"
+        android:padding="5px"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:spinnerMode="dropdown" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/statSpinner"
+        android:id="@+id/refreshButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10px"
+        android:text="Refresh"
+        android:background="#2c3e50"
+        android:textColor="#FFFFFF" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/refreshButton"
+        android:id="@+id/gamesPlayedStatLabel"
+        android:textSize="40px"
+        android:textColor="#2c3e50"
+        android:text="Played: "
+        android:layout_marginStart="30px"
+        android:layout_marginTop="30px" />
+    <TextView
+        android:text="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/gamesPlayedStatLabel"
+        android:id="@+id/gamesPlayedStat"
+        android:textSize="40px"
+        android:textColor="#2c3e50"
+        android:layout_below="@+id/refreshButton"
+        android:layout_marginTop="30px" />
+    <TextView
+        android:text="Points: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gamesPlayedStatLabel"
+        android:id="@+id/numOfPointsStatLabel"
+        android:textColor="#2c3e50"
+        android:textSize="40px"
+        android:layout_marginStart="30px"
+        android:layout_marginTop="20px" />
+    <TextView
+        android:text="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/numOfPointsStatLabel"
+        android:layout_below="@id/gamesPlayedStat"
+        android:textColor="#2c3e50"
+        android:id="@+id/numOfPointsStat"
+        android:textSize="40px"
+        android:layout_marginTop="20px" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/numOfPointsStatLabel"
+        android:id="@+id/gamesWonStatLabel"
+        android:textSize="40px"
+        android:textColor="#2c3e50"
+        android:text="Won: "
+        android:layout_marginStart="30px"
+        android:layout_marginTop="30px" />
+    <TextView
+        android:text="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/gamesWonStatLabel"
+        android:id="@+id/gamesWonStat"
+        android:textSize="40px"
+        android:textColor="#2c3e50"
+        android:layout_below="@+id/numOfPointsStat"
+        android:layout_marginTop="30px" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gamesWonStatLabel"
+        android:id="@+id/gamesDrawStatLabel"
+        android:textSize="40px"
+        android:textColor="#2c3e50"
+        android:text="Draw: "
+        android:layout_marginStart="30px"
+        android:layout_marginTop="30px" />
+    <TextView
+        android:text="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/gamesDrawStatLabel"
+        android:id="@+id/gamesDrawStat"
+        android:textSize="40px"
+        android:textColor="#2c3e50"
+        android:layout_below="@+id/gamesWonStat"
+        android:layout_marginTop="30px" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gamesDrawStatLabel"
+        android:id="@+id/gamesLostStatLabel"
+        android:textSize="40px"
+        android:textColor="#2c3e50"
+        android:text="Lost: "
+        android:layout_marginStart="30px"
+        android:layout_marginTop="30px" />
+    <TextView
+        android:text="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/gamesLostStatLabel"
+        android:id="@+id/gamesLostStat"
+        android:textSize="40px"
+        android:textColor="#2c3e50"
+        android:layout_below="@+id/gamesDrawStat"
+        android:layout_marginTop="30px" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gamesLostStatLabel"
+        android:id="@+id/goalsScoredStatLabel"
+        android:textSize="40px"
+        android:textColor="#2c3e50"
+        android:text="Goals Scored:  "
+        android:layout_marginStart="30px"
+        android:layout_marginTop="30px" />
+    <TextView
+        android:text="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/goalsScoredStatLabel"
+        android:id="@+id/goalsScoredStat"
+        android:textSize="40px"
+        android:textColor="#2c3e50"
+        android:layout_below="@+id/gamesLostStat"
+        android:layout_centerHorizontal="false"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="30px" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/goalsScoredStatLabel"
+        android:id="@+id/goalsAgainstStatLabel"
+        android:textSize="40px"
+        android:textColor="#2c3e50"
+        android:text="Goals Against  "
+        android:layout_marginStart="30px"
+        android:layout_marginTop="30px" />
+    <TextView
+        android:text="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/goalsAgainstStatLabel"
+        android:id="@+id/goalsAgainstStat"
+        android:textSize="40px"
+        android:textColor="#2c3e50"
+        android:layout_below="@+id/goalsScoredStat"
+        android:layout_marginTop="30px" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/goalsAgainstStatLabel"
+        android:id="@+id/goalDiferenceStatLabel"
+        android:textSize="40px"
+        android:textColor="#2c3e50"
+        android:text="Goal diference "
+        android:layout_marginStart="30px"
+        android:layout_marginTop="30px" />
+    <TextView
+        android:text="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/goalDiferenceStatLabel"
+        android:id="@+id/goalDiferenceStat"
+        android:textSize="40px"
+        android:textColor="#2c3e50"
+        android:layout_below="@+id/goalsAgainstStat"
+        android:layout_marginTop="30px" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/goalDiferenceStatLabel"
+        android:id="@+id/homeGoalsStatLabel"
+        android:textSize="40px"
+        android:textColor="#2c3e50"
+        android:text="Home goals     "
+        android:layout_marginStart="30px"
+        android:layout_marginTop="30px" />
+    <TextView
+        android:text="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/homeGoalsStatLabel"
+        android:id="@+id/homeGoalsStat"
+        android:textSize="40px"
+        android:textColor="#2c3e50"
+        android:layout_below="@+id/goalDiferenceStat"
+        android:layout_marginTop="30px" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/homeGoalsStatLabel"
+        android:id="@+id/awayGoalsStatLabel"
+        android:textSize="40px"
+        android:textColor="#2c3e50"
+        android:text="Away goals      "
+        android:layout_marginStart="30px"
+        android:layout_marginTop="30px" />
+    <TextView
+        android:text="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/awayGoalsStatLabel"
+        android:id="@+id/awayGoalsStat"
+        android:textSize="40px"
+        android:textColor="#2c3e50"
+        android:layout_below="@+id/homeGoalsStat"
+        android:layout_marginTop="30px" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/awayGoalsStatLabel"
+        android:id="@+id/goalsPerMatchStatLabel"
+        android:textSize="40px"
+        android:textColor="#2c3e50"
+        android:text="Goals per match "
+        android:layout_marginStart="30px"
+        android:layout_marginTop="30px" />
+    <TextView
+        android:text="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/goalsPerMatchStatLabel"
+        android:id="@+id/goalsPerMatchStat"
+        android:textSize="40px"
+        android:textColor="#2c3e50"
+        android:layout_below="@+id/awayGoalsStat"
+        android:layout_marginTop="30px" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/goalsPerMatchStatLabel"
+        android:id="@+id/goalsReceivedPerMatchStatLabel"
+        android:textSize="40px"
+        android:textColor="#2c3e50"
+        android:text="Received per match "
+        android:layout_marginStart="30px"
+        android:layout_marginTop="30px" />
+    <TextView
+        android:text="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/goalsReceivedPerMatchStatLabel"
+        android:id="@+id/goalsReceivedPerMatchStat"
+        android:textSize="40px"
+        android:textColor="#2c3e50"
+        android:layout_below="@+id/goalsPerMatchStat"
+        android:layout_marginTop="30px" />
+</RelativeLayout>

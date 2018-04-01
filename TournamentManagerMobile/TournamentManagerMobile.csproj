@@ -205,6 +205,7 @@
     <Compile Include="Activities\allFixturesAndResults.cs" />
     <Compile Include="Activities\allPlayersActivity.cs" />
     <Compile Include="Activities\createNewTournament.cs" />
+    <Compile Include="Activities\knockout4Players.cs" />
     <Compile Include="Activities\leagueType.cs" />
     <Compile Include="Activities\MainActivity.cs" />
     <Compile Include="Activities\addNewPlayers.cs" />
@@ -284,6 +285,9 @@
     <AndroidResource Include="Resources\layout\winnersAllTime.axml" />
     <AndroidResource Include="Resources\layout\winnersAllTimeLV.axml" />
     <AndroidResource Include="Resources\layout\winnersLV.axml" />
+    <AndroidResource Include="Resources\layout\knockout4Players.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml">

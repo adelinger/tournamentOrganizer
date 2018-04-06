@@ -99,7 +99,35 @@ namespace TournamentManagerMobile.Activities
 
             fixtAndResList.ItemClick += delegate (object sender, Android.Widget.AdapterView.ItemClickEventArgs e)
             {
+                List<results> getPlayerNames = con.db.Query<results>("SELECT * FROM results WHERE tournamentID = '" + tournamentID + "' ");
+                string player1Name = getPlayerNames[e.Position].homePlayerName;
+                string player2Name = getPlayerNames[e.Position].awayPlayerName;
+                AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+                dialog.SetTitle("Choose one");
+                dialog.SetMessage("What do you want to see?");
+                dialog.SetNeutralButton("Cancel", (senderAlert, args) =>
+                {
+                    dialog.Dispose();
+                });
+                dialog.SetPositiveButton(player2Name, (senderAlert, args) =>
+                {
+                    Intent intent = new Intent(this, typeof(stats));
 
+                    intent.PutExtra("playerName", player2Name);
+                    intent.PutExtra("tournamentID", tournamentID.ToString());
+                    StartActivity(intent);
+
+                });
+                dialog.SetNegativeButton(player1Name, (senderAlert, args) =>
+                {
+                    Intent intent = new Intent(this, typeof(stats));
+
+                    intent.PutExtra("playerName", player1Name);
+                    intent.PutExtra("tournamentID", tournamentID.ToString());
+                    StartActivity(intent);
+                });
+                Dialog alertDialog = dialog.Create();
+                alertDialog.Show();
             };
             
         }

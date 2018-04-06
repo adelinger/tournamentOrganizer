@@ -29,6 +29,14 @@ namespace TournamentManagerMobile.Activities
 
             transaction.Replace(Resource.Id.sample_content_fragment, fragment);
             transaction.Commit();
-        }    
+
+        }
+        
+        public void getActivityStarted (View view, string tournamentName)
+        {
+            Intent intent = new Intent(view.Context, typeof(leagueType));
+            intent.PutExtra("tournamentName", tournamentName);
+            StartActivity(intent);
+        }
     }
 }

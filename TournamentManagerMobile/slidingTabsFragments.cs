@@ -12,6 +12,7 @@ using Android.Util;
 using Android.Views;
 using Android.Widget;
 using Java.Lang;
+using TournamentManagerMobile.Activities;
 using TournamentManagerMobile.Resources;
 using TournamentManagerMobile.Resources.MyClasses;
 
@@ -124,9 +125,10 @@ namespace TournamentManagerMobile
                         {
                             StringListOfTournaments.Add(item2.name);
                         }
+                       
                     }
+                  
 
-              
                     ArrayAdapter<string> adapter = new ArrayAdapter<string>(view.Context, Android.Resource.Layout.SimpleListItem1, StringListOfTournaments);
                     tournamentsTxt.Adapter = adapter;
 

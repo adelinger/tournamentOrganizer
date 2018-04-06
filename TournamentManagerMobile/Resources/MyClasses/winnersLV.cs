@@ -41,7 +41,7 @@ namespace TournamentManagerMobile.Resources.MyClasses
                 row = LayoutInflater.From(myContext).Inflate(Resource.Layout.winnersLV, null, false);
             }
             TextView ordNum = row.FindViewById<TextView>(Resource.Id.number);
-            ordNum.Text     = ordNumber++.ToString();
+            ordNum.Text     = ordNumber.ToString();
             TextView name   = row.FindViewById<TextView>(Resource.Id.playerName);
             name.Text       = myItems[position].personName;
             TextView club   = row.FindViewById<TextView>(Resource.Id.ClubName);

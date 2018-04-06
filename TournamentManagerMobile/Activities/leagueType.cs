@@ -392,32 +392,7 @@ namespace TournamentManagerMobile.Activities
           
             resetButton.Click += delegate
             {
-                //AlertDialog.Builder dialog = new AlertDialog.Builder(this);
-                //dialog.SetTitle("RESET");
-                //dialog.SetMessage("Are you sure you want to reset the tournament?");
-                //dialog.SetNegativeButton("Cancel", (senderAlert, args) =>
-                //{
-                //    dialog.Dispose();
-                //});
-                //dialog.SetPositiveButton("Yes", (senderAlert, args) =>
-                //{                  
-                //    try
-                //    {
-                //        connection.db.Execute("UPDATE points SET numOfPoints = 0, gamesPlayed = 0, won = 0, draw = 0, lost = 0, homeGoals = 0," +
-                //            " awayGoals = 0, goalsScored = 0, goalsReceived = 0, goalDiference = 0 WHERE tournamentID  = '" + tournamentID + "' ");
-                //        connection.db.Execute("DELETE FROM results WHERE tournamentID = '" + tournamentID + "' ");
-                //        connection.db.Execute("DELETE from tournamentScorer WHERE tournamentID = '" + tournamentID + "' ");
 
-                //        Toast.MakeText(this, "Successfull", ToastLength.Short).Show();
-                //    }
-                //    catch (Exception)
-                //    {
-                //        throw;
-                //    }
-
-                //});
-                //Dialog alertDialog = dialog.Create();
-                //alertDialog.Show();
 
                 Intent intent = new Intent(this, typeof(MainActivity));
                 StartActivity(intent);

@@ -21,7 +21,7 @@ namespace TournamentManagerMobile.Resources
     [Activity(Theme = "@android:style/Theme.Material.Light", Label = "Add new players")]
     public class addNewPlayers : Activity
     {
-        StartAppAd startAppAd;
+
         Banner banner;
         connection con = new connection();
         protected override void OnCreate(Bundle savedInstanceState)
@@ -268,6 +268,7 @@ namespace TournamentManagerMobile.Resources
             var adapter2 = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, allClubsFromDB);
             addClubName.Adapter = adapter2;
         }
+       
     }
 
 }

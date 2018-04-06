@@ -1,12 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <RelativeLayout
-        android:minWidth="25px"
-        android:minHeight="25px"
+    <Button
+        android:id="@+id/plusIncrementKnockout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/relativeLayout1" />
-</LinearLayout>
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:editable="false"
+        android:layout_marginRight="195dip"
+        android:layout_marginLeft="130dip" />
+    <TextView
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/player1TextViewKnockout"
+        android:layout_below="@id/plusIncrementKnockout"
+        android:gravity="center"
+        android:textSize="25dip"
+        android:hint="Player 1"
+        android:width="120dip"
+        android:maxLength="12"
+        android:clickable="true" />
+    <TextView
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Player2textViewKnockout"
+        android:layout_below="@id/plusIncrementKnockout"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:textSize="25dip"
+        android:hint="Player 2"
+        android:maxLength="12"
+        android:width="120dip"
+        android:clickable="true" />
+    <EditText
+        android:id="@+id/result1Knockout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/player1TextViewKnockout"
+        android:layout_below="@id/plusIncrementKnockout"
+        android:layout_marginLeft="25dip"
+        android:text="0"
+        android:layout_marginTop="-10dip"
+        android:textSize="30dip" />
+    <EditText
+        android:id="@+id/result2Knockout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/Player2textViewKnockout"
+        android:layout_below="@id/plusIncrementKnockout"
+        android:layout_marginRight="25dip"
+        android:layout_marginTop="-10dip"
+        android:textSize="30dip"
+        android:text="0" />
+    <Button
+        android:id="@+id/minusIncrementKnockout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="130dip"
+        android:layout_marginRight="195dip"
+        android:layout_below="@id/result1Knockout"
+        android:text="-"
+        android:editable="false" />
+    <Button
+        android:id="@+id/plusIncrementP2Knockout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="195dip"
+        android:layout_marginRight="130dip"
+        android:layout_above="@id/result2Knockout"
+        android:text="+"
+        android:editable="false" />
+    <Button
+        android:id="@+id/minusIncrementP2Knockout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="195dip"
+        android:layout_marginRight="130dip"
+        android:layout_below="@id/result2Knockout"
+        android:text="-"
+        android:editable="false" />
+    <Button
+        android:id="@+id/nextMatchKnockout"
+        android:layout_below="@id/minusIncrementKnockout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose match"
+        android:background="#2c3e50"
+        android:layout_marginTop="20dip"
+        android:textColor="@android:color/background_light"
+        android:layout_marginLeft="50dip" />
+    <Button
+        android:id="@+id/applyButtonKnockout"
+        android:layout_below="@id/minusIncrementKnockout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apply result"
+        android:background="#2c3e50"
+        android:layout_marginLeft="250dip"
+        android:layout_marginTop="20dip"
+        android:textColor="@android:color/background_light" />
+    <Button
+        android:id="@+id/knockoutDraw"
+        android:layout_below="@id/nextMatchKnockout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Knockout draw"
+        android:background="#2c3e50"
+        android:layout_marginTop="10dip"
+        android:textColor="@android:color/background_light" />
+    <Button
+        android:id="@+id/addGoalscorersButtonKnockout"
+        android:layout_below="@id/knockoutDraw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Goalscorers"
+        android:layout_marginTop="30dip"
+        android:background="#2c3e50"
+        android:textColor="@android:color/background_light" />
+</RelativeLayout>

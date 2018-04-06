@@ -39,6 +39,22 @@ namespace TournamentManagerMobile.Activities
 
                 winnersLV adapter = new winnersLV(this, winners);
                 playersList.Adapter = adapter;
+
+                playersList.ItemClick += delegate (object sender, Android.Widget.AdapterView.ItemClickEventArgs e)
+                {
+                    int tournamentID = 0;
+                    string playerName = winners[e.Position].personName;
+                    List<tournament> getID = con.db.Query<tournament>("SELECT * FROM tournament WHERE name = '" + winners[e.Position].tournamentName + "' ");
+                    foreach (var item in getID)
+                    {
+                        tournamentID = item.id;
+                    }                     
+
+                    Intent intent = new Intent(this, typeof(stats));
+                    intent.PutExtra("playerName", playerName);
+                    intent.PutExtra("tournamentID", tournamentID.ToString());
+                    StartActivity(intent);
+                };
             }
             catch (Exception)
             {

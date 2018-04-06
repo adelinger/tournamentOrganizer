@@ -96,6 +96,11 @@ namespace TournamentManagerMobile.Activities
            
             ArrayAdapter adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, fixturesAndResult);
             fixtAndResList.Adapter = adapter;
+
+            fixtAndResList.ItemClick += delegate (object sender, Android.Widget.AdapterView.ItemClickEventArgs e)
+            {
+
+            };
             
         }
 

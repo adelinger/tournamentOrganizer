@@ -35,8 +35,9 @@ namespace TournamentManagerMobile.Activities
             banner.SetBannerListener(bannerListener);
 
 
-            Button playersDB = FindViewById<Button>(Resource.Id.playersBaseButton);
+            Button playersDB  = FindViewById<Button>(Resource.Id.playersBaseButton);
             Button topScorers = FindViewById<Button>(Resource.Id.topScorers);
+            Button clubButton = FindViewById<Button>(Resource.Id.clubButton);
 
             playersDB.Click += delegate
             {
@@ -47,6 +48,11 @@ namespace TournamentManagerMobile.Activities
             topScorers.Click += delegate
             {
                 Intent intent = new Intent(this, typeof(topScorerActivity));
+                StartActivity(intent);
+            };
+            clubButton.Click += delegate
+            {
+                Intent intent = new Intent(this, typeof(clubs));
                 StartActivity(intent);
             };
         }

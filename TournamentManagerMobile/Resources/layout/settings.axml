@@ -11,9 +11,9 @@
         android:background="@drawable/person"
         android:gravity="bottom"
         android:layout_gravity="center"
-        android:layout_marginTop="60px"
         android:textColor="#2c3e50"
-        android:layout_weight="0.3" />
+        android:layout_weight="0.2"
+        android:layout_marginTop="50px" />
     <TextView
         android:text="Players database"
         android:layout_width="match_parent"
@@ -21,7 +21,7 @@
         android:id="@+id/textView1"
         android:gravity="center"
         android:textColor="#34495e"
-        android:layout_weight="0.1" />
+        android:layout_weight="0.01" />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -29,9 +29,9 @@
         android:background="@drawable/iftrophy054950"
         android:layout_gravity="center"
         android:gravity="bottom"
-        android:layout_marginTop="100px"
         android:textColor="#2c3e50"
-        android:layout_weight="0.3" />
+        android:layout_weight="0.2"
+        android:layout_marginTop="10px" />
     <TextView
         android:text="Top scorers"
         android:layout_width="match_parent"
@@ -39,11 +39,29 @@
         android:id="@+id/textView2"
         android:gravity="center"
         android:textColor="#34495e"
-        android:layout_weight="0.1" />
+        android:layout_weight="0.01" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/clubButton"
+        android:background="@drawable/team2473778"
+        android:layout_gravity="center"
+        android:layout_weight="0.2"
+        android:layout_marginTop="10px" />
+    <TextView
+        android:text="Clubs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewClubs"
+        android:gravity="center"
+        android:textColor="#34495e"
+        android:layout_weight="0.01"
+        android:layout_marginBottom="10px"
+        android:layout_marginTop="-30px" />
     <com.startapp.android.publish.banner.Banner
         android:id="@+id/settingsBanner"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:layout_marginTop="130dip"
-        android:layout_weight="0.2" />
+        android:layout_weight="0.2"
+        android:layout_marginTop="10px" />
 </LinearLayout>

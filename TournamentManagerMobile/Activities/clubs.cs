@@ -33,20 +33,59 @@ namespace TournamentManagerMobile.Activities
             List<string> allClubsFromDB = new List<string>();
 
             List<club> clubs = con.db.Query<club>("SELECT * FROM club");
-            
+            string selected = "";
 
             foreach (var item in clubs)
             {
                 allClubsFromDB.Add(item.name);
             }
 
-            var adapter2 = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, allClubsFromDB);
-            clubtxt.Adapter = adapter2;
+            try
+            {
+                var adapter2 = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, allClubsFromDB);
+                clubtxt.Adapter = adapter2;
+            }
+            catch (Exception)
+            {
+
+                Toast.MakeText(this, "There is nothing here yet", ToastLength.Short).Show();
+            }
+           
 
             addButton.Click += delegate
             {
-                con.db.Execute("INSERT INTO clubs (clubName) VALUES ('" + clubtxt.Text + "') ");
-                fillAndRefreshList(clubListView);
+                if (addButton.Text == "ADD")
+                {
+                    if (clubtxt.Text == "")
+                    {
+                        Toast.MakeText(this, "Club name can't be empty", ToastLength.Short).Show();
+                    }
+                    try
+                    {
+                        
+                        con.db.Execute("INSERT INTO club (name) VALUES ('" + clubtxt.Text + "') ");
+                        fillAndRefreshList(clubListView);
+                        clubtxt.Text = "";
+                    }
+                    catch (Exception)
+                    {
+
+                        Toast.MakeText(this, "Club with this name already exists", ToastLength.Short).Show();
+                    }
+                    
+                }
+                if (addButton.Text == "UPDATE")
+                {
+                    if (clubtxt.Text == "")
+                    {
+                        Toast.MakeText(this, "Club name can't be empty", ToastLength.Short).Show();
+                    }
+                    con.db.Execute("UPDATE club set name = '" + clubtxt.Text + "' WHERE name = '"+selected+"' ");
+                    fillAndRefreshList(clubListView);
+                    addButton.Text = "ADD";
+                    clubtxt.Text = "";
+                }
+               
             };
 
             string clubName = "";
@@ -60,7 +99,25 @@ namespace TournamentManagerMobile.Activities
 
             clubListView.ItemLongClick += delegate (object sender, Android.Widget.AdapterView.ItemLongClickEventArgs e)
             {
+                List<club> clubList = con.db.Query<club>("SELECT * FROM club");
 
+                AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+                dialog.SetTitle("Update player");
+                dialog.SetMessage("Do you want to update selected player?");
+                
+                dialog.SetPositiveButton("YES", (senderAlert, args) =>
+                {
+                    selected = clubList[e.Position].name;
+                    clubtxt.Text = clubList[e.Position].name;
+                    addButton.Text = "UPDATE";
+
+                });
+                dialog.SetNegativeButton("No", (senderAlert, args) =>
+                {
+                    dialog.Dispose();
+                });
+                Dialog alertDialog = dialog.Create();
+                alertDialog.Show();
             };
             
         }

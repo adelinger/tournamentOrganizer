@@ -10,7 +10,7 @@
         android:id="@+id/clubTxt"
         android:hint="Club name" />
     <Button
-        android:text="Add"
+        android:text="ADD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/addClubButton"

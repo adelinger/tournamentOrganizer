@@ -204,6 +204,7 @@
     <Compile Include="Activities\addGoalScorer.cs" />
     <Compile Include="Activities\allFixturesAndResults.cs" />
     <Compile Include="Activities\allPlayersActivity.cs" />
+    <Compile Include="Activities\clubDetails.cs" />
     <Compile Include="Activities\clubs.cs" />
     <Compile Include="Activities\createNewTournament.cs" />
     <Compile Include="Activities\knockout4Players.cs" />
@@ -292,6 +293,9 @@
     <AndroidResource Include="Resources\layout\clubsLayout.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\clubDetails.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml">
@@ -362,6 +366,12 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\team2473778.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\statist2125613.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\statLarger2125613.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

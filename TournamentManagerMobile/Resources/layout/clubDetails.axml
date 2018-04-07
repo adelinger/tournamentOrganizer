@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <MediaController
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:id="@+id/mediaController1">
+        <ImageView
+            android:src="@drawable/statlarger2125613"
+            android:layout_width="match_parent"
+            android:layout_height="170px"
+            android:id="@+id/imageView1" />
+    </MediaController>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/clubTextView"
+        android:layout_below="@id/mediaController1"
+        android:hint="Club Name"
+        android:enabled="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50px"
+        android:textColor="@android:color/background_dark" />
+    <TextView
+        android:text="Number of players played with this club:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/clubTextView"
+        android:id="@+id/labelNumOfPeople"
+        android:layout_marginTop="40px"
+        android:textColor="@android:color/background_dark" />
+    <TextView
+        android:text="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/labelNumOfPeople"
+        android:id="@+id/numOfPeoplePlayed"
+        android:layout_below="@id/clubTextView"
+        android:paddingTop="40px"
+        android:paddingLeft="10px" />
+    <TextView
+        android:text="Tournaments won by this club"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/labelNumOfPeople"
+        android:id="@+id/textView2"
+        android:layout_marginTop="40px"
+        android:textColor="@android:color/background_dark" />
+    <TextView
+        android:text="(0)"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/textView2"
+        android:id="@+id/wonByThisClub"
+        android:layout_below="@id/numOfPeoplePlayed"
+        android:layout_marginTop="40px"
+        android:layout_marginLeft="10px" />
+    <ListView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/textView2"
+        android:id="@+id/wonByThisClubList" />
+</RelativeLayout>

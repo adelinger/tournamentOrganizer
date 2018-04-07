@@ -14,7 +14,7 @@ using TournamentManagerMobile.Resources.MyClasses;
 
 namespace TournamentManagerMobile.Activities
 {
-    [Activity(Theme = "@android:style/Theme.Material.Light", Label = "clubs")]
+    [Activity(Theme = "@android:style/Theme.Material.Light", Label = "Clubs")]
     public class clubs : Activity
     {
         connection con = new connection();
@@ -49,11 +49,18 @@ namespace TournamentManagerMobile.Activities
                 fillAndRefreshList(clubListView);
             };
 
-            string selected = "";
+            string clubName = "";
             clubListView.ItemClick += delegate (object sender, Android.Widget.AdapterView.ItemClickEventArgs e)
             {
-                selected        = clubs[e.Position].name;
-               
+                clubName = clubs[e.Position].name;
+                Intent intent = new Intent(this, typeof(clubDetails));
+                intent.PutExtra("clubName", clubName);
+                StartActivity(intent);              
+            };
+
+            clubListView.ItemLongClick += delegate (object sender, Android.Widget.AdapterView.ItemLongClickEventArgs e)
+            {
+
             };
             
         }

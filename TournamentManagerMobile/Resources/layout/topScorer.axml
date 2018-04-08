@@ -3,7 +3,8 @@
     p1:orientation="vertical"
     p1:layout_width="match_parent"
     p1:layout_height="match_parent"
-    p1:id="@+id/linearLayout1">
+    p1:id="@+id/linearLayout1"
+    p1:weightSum="1">
     <MediaController
         p1:minWidth="25px"
         p1:minHeight="25px"
@@ -21,6 +22,13 @@
         p1:minWidth="25px"
         p1:minHeight="25px"
         p1:layout_width="match_parent"
+        p1:id="@+id/topScorersLV"
         p1:layout_height="match_parent"
-        p1:id="@+id/topScorersLV" />
+        p1:layout_weight="0.999" />
+    <com.startapp.android.publish.banner.Banner
+        p1:id="@+id/TopScorersBanner"
+        p1:layout_height="wrap_content"
+        p1:layout_width="match_parent"
+        p1:layout_below="@id/playersList"
+        p1:layout_weight="0.001" />
 </LinearLayout>

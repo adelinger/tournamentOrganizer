@@ -67,7 +67,13 @@
         android:minWidth="25px"
         android:minHeight="25px"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
         android:layout_below="@id/textView2"
-        android:id="@+id/wonByThisClubList" />
+        android:id="@+id/wonByThisClubList"
+        android:layout_height="600px" />
+    <com.startapp.android.publish.banner.Banner
+        android:id="@+id/clubDetailsBanner"
+        android:layout_width="match_parent"
+        android:layout_below="@id/wonByThisClubList"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content" />
 </RelativeLayout>

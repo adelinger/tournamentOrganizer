@@ -85,12 +85,13 @@
         android:minWidth="25px"
         android:minHeight="25px"
         android:layout_width="match_parent"
-        android:layout_height="430dip"
+        android:layout_height="390dip"
         android:layout_below="@id/labelOrdNumber"
         android:id="@+id/tableList" />
     <com.startapp.android.publish.banner.Banner
         android:id="@+id/tableBanner"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:layout_below="@id/tableList" />
+        android:layout_below="@id/tableList"
+        android:layout_alignParentBottom="true" />
 </RelativeLayout>

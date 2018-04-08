@@ -9,6 +9,8 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Com.Startapp.Android.Publish;
+using Com.Startapp.Android.Publish.Banner;
 using TournamentManagerMobile.Resources;
 using TournamentManagerMobile.Resources.MyClasses;
 
@@ -21,8 +23,15 @@ namespace TournamentManagerMobile.Activities
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+            Banner banner;
+            StartAppSDK.Init(this, "202635783", true);
 
             SetContentView(Resource.Layout.clubDetails);
+
+            IBannerListener bannerListener = new AdListener();
+            banner = FindViewById<Com.Startapp.Android.Publish.Banner.Banner>(Resource.Id.clubDetailsBanner);
+            banner.ShowBanner();
+            banner.SetBannerListener(bannerListener);
 
             TextView numOfPlayerWithClub = FindViewById<TextView>(Resource.Id.numOfPeoplePlayed);
             TextView wonWithClub         = FindViewById<TextView>(Resource.Id.wonByThisClub);

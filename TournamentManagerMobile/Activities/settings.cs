@@ -42,7 +42,7 @@ namespace TournamentManagerMobile.Activities
             playersDB.Click += delegate
             {
                 Intent intent = new Intent(this, typeof(allPlayersActivity));
-                StartActivity(intent);
+                StartActivity(intent);               
             };
 
             topScorers.Click += delegate

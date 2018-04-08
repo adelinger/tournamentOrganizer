@@ -70,11 +70,12 @@
         android:id="@+id/playersList"
         android:layout_below="@id/applyButton"
         android:layout_width="match_parent"
-        android:layout_height="250dip"
+        android:layout_height="200dip"
         android:layout_marginTop="15dip" />
     <com.startapp.android.publish.banner.Banner
         android:id="@+id/goalScorerBanner"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:layout_below="@id/playersList" />
+        android:layout_below="@id/playersList"
+        android:layout_alignParentBottom="true" />
 </RelativeLayout>

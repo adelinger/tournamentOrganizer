@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Com.Startapp.Android.Publish;
 using TournamentManagerMobile.Resources;
 using TournamentManagerMobile.Resources.MyClasses;
 
@@ -21,8 +22,12 @@ namespace TournamentManagerMobile.Activities
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+            StartAppAd startAppAd;
+            StartAppSDK.Init(this, "202635783", true);
 
             SetContentView(Resource.Layout.allPlayersLayout);
+
+            StartAppAd.ShowAd(this);
 
             ListView allPlayers = FindViewById<ListView>(Resource.Id.allPlayersLV);
             try

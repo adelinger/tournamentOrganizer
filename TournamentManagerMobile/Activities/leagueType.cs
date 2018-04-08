@@ -251,13 +251,13 @@ namespace TournamentManagerMobile.Activities
             {
                 if (checkIftournamentIsOver(oddEven, checkExistingMatches(tournamentID)) && numOfRounds == "one")
                 {
-                    Toast.MakeText(this, "This tournament is over. You can reset it and start again", ToastLength.Short).Show();
+                    Toast.MakeText(this, "This tournament is over.", ToastLength.Short).Show();
                     return;
                 }
 
                 if (checkIfTournamentIsOverTwoRounds(oddEven, checkExistingMatches(tournamentID)) && numOfRounds == "two")
                 {
-                    Toast.MakeText(this, "This tournament is over. You can reset it and start again", ToastLength.Short).Show();
+                    Toast.MakeText(this, "This tournament is over.", ToastLength.Short).Show();
                     return;
                 }
 

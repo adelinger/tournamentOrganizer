@@ -43,6 +43,7 @@
         android:id="@+id/numOfPeoplePlayed"
         android:layout_below="@id/clubTextView"
         android:paddingTop="40px"
+        android:textColor="#2c3e50"
         android:paddingLeft="10px" />
     <TextView
         android:text="Tournaments won by this club"
@@ -59,6 +60,7 @@
         android:layout_toRightOf="@id/textView2"
         android:id="@+id/wonByThisClub"
         android:layout_below="@id/numOfPeoplePlayed"
+        android:textColor="#2c3e50"
         android:layout_marginTop="40px"
         android:layout_marginLeft="10px" />
     <ListView

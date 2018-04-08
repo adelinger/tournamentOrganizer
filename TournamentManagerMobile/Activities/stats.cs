@@ -32,11 +32,6 @@ namespace TournamentManagerMobile.Activities
 
         }
         
-        public void getActivityStarted (View view, string tournamentName)
-        {
-            Intent intent = new Intent(view.Context, typeof(leagueType));
-            intent.PutExtra("tournamentName", tournamentName);
-            StartActivity(intent);
-        }
+        
     }
 }

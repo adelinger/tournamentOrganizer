@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -12,9 +11,14 @@ using Android.Util;
 using Android.Views;
 using Android.Widget;
 using Java.Lang;
-using TournamentManagerMobile.Activities;
-using TournamentManagerMobile.Resources;
+using SQLite;
 using TournamentManagerMobile.Resources.MyClasses;
+using System.IO;
+using TournamentManagerMobile.Resources;
+using Com.Startapp.Android.Publish.Banner;
+using Com.Startapp.Android.Publish;
+using TournamentManagerMobile.Activities;
+
 
 namespace TournamentManagerMobile
 {
@@ -30,7 +34,7 @@ namespace TournamentManagerMobile
             player = Player;
             tournamentID = TournamentID;
         }
-        
+       
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             return inflater.Inflate(Resource.Layout.fragment_sample, container, false);
@@ -39,7 +43,7 @@ namespace TournamentManagerMobile
         {
             mSlidingTabScrollView = View.FindViewById<slidingTabScrollView>(Resource.Id.sliding_tabs);
             mViewPager = View.FindViewById<ViewPager>(Resource.Id.viewpager);
-            mViewPager.Adapter = new SamplePageAdapter(player, tournamentID);
+            mViewPager.Adapter = new SamplePageAdapter(player, tournamentID, Activity);
 
             mSlidingTabScrollView.viewPager = mViewPager;
         }
@@ -52,13 +56,15 @@ namespace TournamentManagerMobile
             public string player    { get; set; }
             public int playerID     { get; set; }
             public int tournamentID { get; set; }
+            private Activity customActivity { get; set; }
 
-            public SamplePageAdapter(string Player, int TournamentID) : base()
+            public SamplePageAdapter(string Player, int TournamentID, Activity activity) : base()
             {
                 player       = Player;
                 tournamentID = TournamentID;
                 items.Add("Details");
-                items.Add("Statistics");              
+                items.Add("Statistics");
+                customActivity = activity;
             }
             public override int Count
             {
@@ -68,7 +74,7 @@ namespace TournamentManagerMobile
             {
                 return view == obj;
             }
-
+            
             public override Java.Lang.Object InstantiateItem(ViewGroup container, int position)
             {                
                 string club = "";
@@ -106,6 +112,14 @@ namespace TournamentManagerMobile
                     TextView clubTxt = view.FindViewById<TextView>(Resource.Id.currentClub);
                     clubTxt.Text = club;
 
+                    clubTxt.Click += delegate 
+                    {
+                        Intent intent = new Intent(view.Context, typeof(clubDetails));
+
+                        intent.PutExtra("clubName", clubTxt.Text);
+                        customActivity.StartActivity(intent);
+                    };
+
                     ListView tournamentsTxt = view.FindViewById<ListView>(Resource.Id.listOfTournaments);
                     List<person> getTourn1 = con.db.Query<person>("SELECT * FROM people WHERE name = '" + player + "' ");
                     foreach (var item in getTourn1)
@@ -117,33 +131,84 @@ namespace TournamentManagerMobile
                     {
                         listOfTournaments.Add(item.tournamentID);
                     }
-       
+                    string tournamentType = "";
                     foreach (var item in listOfTournaments)
                     {
+                       
                         List<tournament> getTournaments = con.db.Query<tournament>("SELECT * FROM tournament WHERE id = '" + item + "' ");
                         foreach (var item2 in getTournaments)
                         {
                             StringListOfTournaments.Add(item2.name);
-                        }
-                       
+                            tournamentType = item2.type;
+                        }                   
                     }
-                  
+
+                    tournamentsTxt.ItemClick += delegate (object sender, AdapterView.ItemClickEventArgs e)
+                    {
+                        if (tournamentType == "League")
+                        {
+                            Intent intent = new Intent(view.Context, typeof(leagueType));
+                            intent.PutExtra("tournamentName", StringListOfTournaments[0]);
+                            customActivity.StartActivity(intent);
+                        }
+
+                    };
+
 
                     ArrayAdapter<string> adapter = new ArrayAdapter<string>(view.Context, Android.Resource.Layout.SimpleListItem1, StringListOfTournaments);
                     tournamentsTxt.Adapter = adapter;
 
                     ListView tournamentsWonTxt = view.FindViewById<ListView>(Resource.Id.listOfTournamentsWon);
-
+                    string type = "";
+                    string name = "";
+                    string clubName = "";
                     List<winners> getWon = con.db.Query<winners>("SELECT * FROM winners where PersonName = '" + player + "' ");
                     foreach (var item in getWon)
                     {
                         listTournamentsWon.Add(item.tournamentName + " - " + item.clubName);
+                        name = item.tournamentName;
+                        clubName = item.clubName;
                     }
-
-                    if(!listTournamentsWon.Any())
+                    List<tournament> getType = con.db.Query<tournament>("SELECT * FROM tournament where name = '" + name + "' ");
+                    foreach (var item in getType)
+                    {
+                        type = item.type;
+                    }
+                    if (!listTournamentsWon.Any())
                     {
                         listTournamentsWon.Add("This player has not won any tournaments yet");
                     }
+
+                    tournamentsWonTxt.ItemClick += delegate (object sender, AdapterView.ItemClickEventArgs e)
+                    {
+                        if (type == "League")
+                        {
+                            AlertDialog.Builder dialog = new AlertDialog.Builder(view.Context);
+                            dialog.SetTitle("Choose one");
+                            dialog.SetMessage("What do you want to see?");
+                            dialog.SetNeutralButton("Cancel", (senderAlert, args) =>
+                            {
+                                dialog.Dispose();
+                            });
+                            dialog.SetPositiveButton(name, (senderAlert, args) =>
+                            {
+                                Intent intent = new Intent(view.Context, typeof(leagueType));
+                                intent.PutExtra("tournamentName", name);
+                                customActivity.StartActivity(intent);
+
+                            });
+                            dialog.SetNegativeButton(clubName, (senderAlert, args) =>
+                            {
+                                Intent intent = new Intent(view.Context, typeof(clubDetails));
+
+                                intent.PutExtra("clubName", clubName);
+                                customActivity.StartActivity(intent);
+                            });
+                            Dialog alertDialog = dialog.Create();
+                            alertDialog.Show();
+                          
+                        }
+                    };
 
                     ArrayAdapter<string> adapter2 = new ArrayAdapter<string>(view.Context, Android.Resource.Layout.SimpleExpandableListItem1, listTournamentsWon);
                     tournamentsWonTxt.Adapter = adapter2;

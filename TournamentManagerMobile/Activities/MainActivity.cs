@@ -38,7 +38,9 @@ namespace TournamentManagerMobile
             Button allWinners    = FindViewById<Button>(Resource.Id.allTimeWinnersButton);
             Button about         = FindViewById<Button>(Resource.Id.aboutButton);
 
-            void createNewTournamentButton_click(object sender, EventArgs e)
+           
+
+        void createNewTournamentButton_click(object sender, EventArgs e)
             {
                 Intent startNewTournament = new Intent(this, typeof(createNewTournament));
                 this.StartActivity(startNewTournament);
@@ -63,7 +65,6 @@ namespace TournamentManagerMobile
             
 
         }
-     
     }
 
    internal class AdListener : Java.Lang.Object, IBannerListener

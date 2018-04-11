@@ -38,7 +38,7 @@ namespace TournamentManagerMobile.Activities
             Android.Gms.Ads.MobileAds.Initialize(ApplicationContext, id);
 
             InterstitialAd mInterstitialAd = new InterstitialAd(this);
-            mInterstitialAd.AdUnitId = "ca-app-pub-3940256099942544/1033173712";
+            mInterstitialAd.AdUnitId = "ca-app-pub-5385963311823976/9393692102";
             var adRequest = new AdRequest.Builder().Build();
             mInterstitialAd.LoadAd(adRequest);
             mInterstitialAd.Show();

@@ -6,6 +6,7 @@ using System.Text;
 
 using Android.App;
 using Android.Content;
+using Android.Gms.Ads;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
@@ -16,7 +17,7 @@ using TournamentManagerMobile.Resources.MyClasses;
 
 namespace TournamentManagerMobile.Activities
 {   
-    [Activity(Theme = "@android:style/Theme.Material.Light", Label =  "League")]
+    [Activity(Theme = "@android:style/Theme.Material.Light", Label =  "League", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class leagueType : Activity
     {
         person person = new person();
@@ -32,6 +33,15 @@ namespace TournamentManagerMobile.Activities
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.leagueType);
+
+            var id = "ca-app-pub-5385963311823976~5875287959";
+            Android.Gms.Ads.MobileAds.Initialize(ApplicationContext, id);
+
+            InterstitialAd mInterstitialAd = new InterstitialAd(this);
+            mInterstitialAd.AdUnitId = "ca-app-pub-3940256099942544/1033173712";
+            var adRequest = new AdRequest.Builder().Build();
+            mInterstitialAd.LoadAd(adRequest);
+            mInterstitialAd.Show();
 
             Button plusIncrementP1  = FindViewById<Button>  (Resource.Id.plusIncrement);
             Button plusIncrementP2  = FindViewById<Button>  (Resource.Id.plusIncrementP2);

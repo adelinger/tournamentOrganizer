@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -93,10 +94,10 @@
         android:layout_weight="0.4"
         android:textColor="@android:color/background_light"
         android:layout_marginBottom="3dp" />
-    <com.startapp.android.publish.banner.Banner
-        android:id="@+id/createTournamentBanner"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:layout_marginTop="10px"
-        android:layout_weight="0.05" />
+  <com.google.android.gms.ads.AdView
+      android:id="@+id/adViewCNT"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      ads:adSize="SMART_BANNER"
+      ads:adUnitId="ca-app-pub-5385963311823976/4200719950" />
 </LinearLayout>

@@ -5,12 +5,11 @@ using System.Text;
 
 using Android.App;
 using Android.Content;
+using Android.Gms.Ads;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Com.Startapp.Android.Publish;
-using Com.Startapp.Android.Publish.Banner;
 using TournamentManagerMobile.Resources.MyClasses;
 
 namespace TournamentManagerMobile.Activities
@@ -18,20 +17,20 @@ namespace TournamentManagerMobile.Activities
     [Activity(Theme = "@android:style/Theme.Material.Light", Label = "winnersAllTimeActivity")]
     public class winnersAllTimeActivity : Activity
     {
-        Banner banner;
+       
         connection con = new connection();       
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
-            StartAppSDK.Init(this, "202635783", true);
-
+    
             SetContentView(Resource.Layout.winnersAllTime);
 
-            IBannerListener bannerListener = new AdListener();
-            banner = FindViewById<Com.Startapp.Android.Publish.Banner.Banner>(Resource.Id.winnersAllTimeBanner);
-            banner.ShowBanner();
-            banner.SetBannerListener(bannerListener);
+            var id = "ca-app-pub-5385963311823976~5875287959";
+            Android.Gms.Ads.MobileAds.Initialize(ApplicationContext, id);
+            var adView = FindViewById<AdView>(Resource.Id.adViewWAT);
+            var adRequest = new AdRequest.Builder().Build();
+            adView.LoadAd(adRequest);
+
 
             this.Title = "All time winners";
           

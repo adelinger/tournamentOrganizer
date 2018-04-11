@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TournamentManagerMobile", "TournamentManagerMobile\TournamentManagerMobile.csproj", "{06749B20-CB7B-4BF5-8406-4211BCBDBDE1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StartApp", "StartApp\StartApp.csproj", "{EF942A2C-92A5-4B61-A2FE-F51D93BDEFD1}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,14 +25,6 @@ Global
 		{06749B20-CB7B-4BF5-8406-4211BCBDBDE1}.Release|x86.ActiveCfg = Release|x86
 		{06749B20-CB7B-4BF5-8406-4211BCBDBDE1}.Release|x86.Build.0 = Release|x86
 		{06749B20-CB7B-4BF5-8406-4211BCBDBDE1}.Release|x86.Deploy.0 = Release|x86
-		{EF942A2C-92A5-4B61-A2FE-F51D93BDEFD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EF942A2C-92A5-4B61-A2FE-F51D93BDEFD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EF942A2C-92A5-4B61-A2FE-F51D93BDEFD1}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{EF942A2C-92A5-4B61-A2FE-F51D93BDEFD1}.Debug|x86.Build.0 = Debug|Any CPU
-		{EF942A2C-92A5-4B61-A2FE-F51D93BDEFD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EF942A2C-92A5-4B61-A2FE-F51D93BDEFD1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EF942A2C-92A5-4B61-A2FE-F51D93BDEFD1}.Release|x86.ActiveCfg = Release|Any CPU
-		{EF942A2C-92A5-4B61-A2FE-F51D93BDEFD1}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

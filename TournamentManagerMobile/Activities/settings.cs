@@ -5,35 +5,31 @@ using System.Text;
 
 using Android.App;
 using Android.Content;
+using Android.Gms.Ads;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Com.Startapp.Android.Publish;
-using Com.Startapp.Android.Publish.Banner;
 
 namespace TournamentManagerMobile.Activities
 {
     [Activity(Theme = "@android:style/Theme.Material.Light", Label = "About")]
     public class settings : Activity
     {
-        StartAppAd startAppAd;
-        Banner banner;
-
+      
         protected override void OnCreate(Bundle savedInstanceState)
         {
 
             base.OnCreate(savedInstanceState);
 
-            StartAppSDK.Init(this, "202635783", true);
-
             SetContentView(Resource.Layout.settings);
 
-            IBannerListener bannerListener = new AdListener();
-            banner = FindViewById<Com.Startapp.Android.Publish.Banner.Banner>(Resource.Id.settingsBanner);
-            banner.ShowBanner();
-            banner.SetBannerListener(bannerListener);
 
+            var id = "ca-app-pub-5385963311823976~5875287959";
+            Android.Gms.Ads.MobileAds.Initialize(ApplicationContext, id);
+            var adView = FindViewById<AdView>(Resource.Id.adViewS);
+            var adRequest = new AdRequest.Builder().Build();
+            adView.LoadAd(adRequest);
 
             Button playersDB  = FindViewById<Button>(Resource.Id.playersBaseButton);
             Button topScorers = FindViewById<Button>(Resource.Id.topScorers);

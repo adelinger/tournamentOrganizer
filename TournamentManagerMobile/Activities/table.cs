@@ -10,16 +10,14 @@ using Android.Views;
 using Android.Widget;
 using TournamentManagerMobile.Resources.MyClasses;
 using TournamentManagerMobile.Resources;
-using Com.Startapp.Android.Publish;
-using Com.Startapp.Android.Publish.Banner;
+using Android.Gms.Ads;
 
 namespace TournamentManagerMobile.Activities
 {
     [Activity(Theme = "@android:style/Theme.Material.Light", Label = "table")]
     public class table : Activity
     {
-        Banner banner;
-
+     
         connection con = new connection();
         List<string> playersOnActiveTournament = new List<string>();
         public string tournamentName { get; set; }
@@ -29,14 +27,14 @@ namespace TournamentManagerMobile.Activities
         {
             base.OnCreate(savedInstanceState);
 
-            StartAppSDK.Init(this, "202635783", true);
 
             SetContentView(Resource.Layout.table);
 
-            IBannerListener bannerListener = new AdListener();
-            banner = FindViewById<Com.Startapp.Android.Publish.Banner.Banner>(Resource.Id.tableBanner);
-            banner.ShowBanner();
-            banner.SetBannerListener(bannerListener);
+            var id = "ca-app-pub-5385963311823976~5875287959";
+            Android.Gms.Ads.MobileAds.Initialize(ApplicationContext, id);
+            var adView = FindViewById<AdView>(Resource.Id.adViewT);
+            var adRequest = new AdRequest.Builder().Build();
+            adView.LoadAd(adRequest);
 
             ListView tableListView = FindViewById<ListView>(Resource.Id.tableList);
             

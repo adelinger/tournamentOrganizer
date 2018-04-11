@@ -2,15 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 using Android.App;
 using Android.Content;
+using Android.Gms.Ads;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Com.Startapp.Android.Publish;
-using Com.Startapp.Android.Publish.Banner;
 using TournamentManagerMobile.Resources;
 using TournamentManagerMobile.Resources.MyClasses;
 
@@ -19,7 +17,7 @@ namespace TournamentManagerMobile.Activities
     [Activity(Theme = "@android:style/Theme.Material.Light", Label = "All fixtures and results")]
     public class allFixturesAndResults : Activity
     {
-        Banner banner;
+       
         connection con = new connection();
         List<string> players1 = new List<string>();
         List<string> players2 = new List<string>();
@@ -30,14 +28,13 @@ namespace TournamentManagerMobile.Activities
         {
             base.OnCreate(savedInstanceState);
 
-            StartAppSDK.Init(this, "202635783", true);
-
             SetContentView(Resource.Layout.allFixturesAndResults);
 
-            IBannerListener bannerListener = new AdListener();
-            banner = FindViewById<Com.Startapp.Android.Publish.Banner.Banner>(Resource.Id.fixturesBanner);
-            banner.ShowBanner();
-            banner.SetBannerListener(bannerListener);
+            var id = "ca-app-pub-5385963311823976~5875287959";
+            Android.Gms.Ads.MobileAds.Initialize(ApplicationContext, id);
+            var adView = FindViewById<AdView>(Resource.Id.adViewAFAR);
+            var adRequest = new AdRequest.Builder().Build();
+            adView.LoadAd(adRequest);
 
             ListView fixtAndResList = FindViewById<ListView>(Resource.Id.fixturesList);
 

@@ -5,11 +5,11 @@ using System.Text;
 
 using Android.App;
 using Android.Content;
+using Android.Gms.Ads;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Com.Startapp.Android.Publish;
 using TournamentManagerMobile.Resources;
 using TournamentManagerMobile.Resources.MyClasses;
 
@@ -22,12 +22,15 @@ namespace TournamentManagerMobile.Activities
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            StartAppAd startAppAd;
-            StartAppSDK.Init(this, "202635783", true);
+          
 
             SetContentView(Resource.Layout.allPlayersLayout);
 
-            StartAppAd.ShowAd(this);
+            var id = "ca-app-pub-5385963311823976~5875287959";
+            Android.Gms.Ads.MobileAds.Initialize(ApplicationContext, id);
+            var adView = FindViewById<AdView>(Resource.Id.adViewAPL);
+            var adRequest = new AdRequest.Builder().Build();
+            adView.LoadAd(adRequest);
 
             ListView allPlayers = FindViewById<ListView>(Resource.Id.allPlayersLV);
             try

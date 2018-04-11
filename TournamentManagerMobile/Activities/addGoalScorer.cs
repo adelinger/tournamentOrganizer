@@ -5,12 +5,11 @@ using System.Text;
 
 using Android.App;
 using Android.Content;
+using Android.Gms.Ads;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Com.Startapp.Android.Publish;
-using Com.Startapp.Android.Publish.Banner;
 using TournamentManagerMobile.Resources.MyClasses;
 
 namespace TournamentManagerMobile.Activities
@@ -20,19 +19,19 @@ namespace TournamentManagerMobile.Activities
     {
         connection con = new connection();
 
-        Banner banner;
+        
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
-            StartAppSDK.Init(this, "202635783", true);
-
             SetContentView(Resource.Layout.addGoalScorer);
 
-            IBannerListener bannerListener = new AdListener();
-            banner = FindViewById<Com.Startapp.Android.Publish.Banner.Banner>(Resource.Id.goalScorerBanner);
-            banner.ShowBanner();
-            banner.SetBannerListener(bannerListener);
+            var idd = "ca-app-pub-5385963311823976~5875287959";
+            Android.Gms.Ads.MobileAds.Initialize(ApplicationContext, idd);
+            var adView = FindViewById<AdView>(Resource.Id.adViewAGS);
+            var adRequest = new AdRequest.Builder().Build();
+            adView.LoadAd(adRequest);
+
 
             AutoCompleteTextView scorerNameText = FindViewById<AutoCompleteTextView>(Resource.Id.scorerNameText);
             Button increment                    = FindViewById<Button>(Resource.Id.plusIncrementGoal);

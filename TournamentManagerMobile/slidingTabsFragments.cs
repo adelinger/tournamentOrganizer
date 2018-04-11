@@ -15,8 +15,6 @@ using SQLite;
 using TournamentManagerMobile.Resources.MyClasses;
 using System.IO;
 using TournamentManagerMobile.Resources;
-using Com.Startapp.Android.Publish.Banner;
-using Com.Startapp.Android.Publish;
 using TournamentManagerMobile.Activities;
 
 

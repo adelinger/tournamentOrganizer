@@ -12,29 +12,27 @@ using System.IO;
 using TournamentManagerMobile.Resources.MyClasses;
 using System.Collections.Generic;
 using TournamentManagerMobile.Resources;
-using Com.Startapp.Android.Publish;
-using Com.Startapp.Android.Publish.Banner;
+using Android.Gms.Ads;
 
 namespace TournamentManagerMobile.Activities
 {
     [Activity(Theme = "@android:style/Theme.Material.Light", Label = "My tournaments")]
     public class myTournaments : Activity
     {
-        Banner banner;
 
         connection con = new connection();
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
-            StartAppSDK.Init(this, "202635783", true);
-
+          
             SetContentView(Resource.Layout.myTournaments);
 
-            IBannerListener bannerListener = new AdListener();
-            banner = FindViewById<Com.Startapp.Android.Publish.Banner.Banner>(Resource.Id.myTournamentBanner);
-            banner.ShowBanner();
-            banner.SetBannerListener(bannerListener);
+            var idd = "ca-app-pub-5385963311823976~5875287959";
+            Android.Gms.Ads.MobileAds.Initialize(ApplicationContext, idd);
+            var adView = FindViewById<AdView>(Resource.Id.adViewMT);
+            var adRequest = new AdRequest.Builder().Build();
+            adView.LoadAd(adRequest);
 
             ListView tournamentsList = FindViewById<ListView>(Resource.Id.listViewTournaments);
 

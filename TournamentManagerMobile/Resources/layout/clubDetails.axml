@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -69,11 +70,12 @@
         android:layout_width="wrap_content"
         android:layout_below="@id/textView2"
         android:id="@+id/wonByThisClubList"
-        android:layout_height="600px" />
-    <com.startapp.android.publish.banner.Banner
-        android:id="@+id/clubDetailsBanner"
-        android:layout_width="match_parent"
-        android:layout_below="@id/wonByThisClubList"
-        android:layout_alignParentBottom="true"
-        android:layout_height="wrap_content" />
+        android:layout_height="650px" />
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adViewCD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="ca-app-pub-5385963311823976/3234643719"
+        android:layout_below="@id/wonByThisClubList" />
 </RelativeLayout>

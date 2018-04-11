@@ -6,30 +6,28 @@ using Android.Content;
 using System.IO;
 using TournamentManagerMobile.Activities;
 using Android.Views;
-using Com.Startapp.Android.Publish;
-using Com.Startapp.Android.Publish.Banner;
+using Android.Gms.Ads;
 
 namespace TournamentManagerMobile
 {
     [Activity(Theme = "@android:style/Theme.Material.Light", Label = "Tournament Organizer", MainLauncher = true)]
     public class MainActivity : Activity
     {
-        StartAppAd startAppAd;
-        Banner banner;
-
+   
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
          
-            StartAppSDK.Init(this, "202635783", true);
+           
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
-            IBannerListener bannerListener = new AdListener();
-            banner = FindViewById<Com.Startapp.Android.Publish.Banner.Banner>(Resource.Id.Banner);
-            banner.ShowBanner();
-            banner.SetBannerListener(bannerListener);
+            var id = "ca-app-pub-5385963311823976~5875287959";
+            Android.Gms.Ads.MobileAds.Initialize(ApplicationContext, id);
+            var adView = FindViewById<AdView>(Resource.Id.adView);
+            var adRequest = new AdRequest.Builder().Build();
+            adView.LoadAd(adRequest);
 
             Button createNewTournamentButton = FindViewById<Button>(Resource.Id.createTournamentButton);
             createNewTournamentButton.Click += createNewTournamentButton_click;
@@ -66,23 +64,6 @@ namespace TournamentManagerMobile
 
         }
     }
-
-   internal class AdListener : Java.Lang.Object, IBannerListener
-    {
-
-        public void OnClick (View p0)
-        {
-
-        }
-
-        public void OnFailedToReceiveAd(View p0)
-        {
-            
-        }
-        public void OnReceiveAd(View p0)
-        {
-           
-        }
-    }
+  
 }
 

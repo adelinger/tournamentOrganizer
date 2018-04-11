@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -27,12 +28,13 @@
         android:minHeight="25px"
         android:layout_width="wrap_content"
         android:id="@+id/fixturesList"
-        android:layout_weight="0.8"
+        android:layout_weight="0.9"
         android:layout_height="wrap_content" />
-    <com.startapp.android.publish.banner.Banner
-        android:id="@+id/fixturesBanner"
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adViewAFAR"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:layout_marginTop="20px"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="ca-app-pub-5385963311823976/7306940032"
         android:layout_weight="0.1" />
 </LinearLayout>

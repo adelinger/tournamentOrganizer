@@ -7,8 +7,7 @@ using Android.Widget;
 using TournamentManagerMobile.Resources.MyClasses;
 using System.IO;
 using TournamentManagerMobile.Resources;
-using Com.Startapp.Android.Publish.Banner;
-using Com.Startapp.Android.Publish;
+using Android.Gms.Ads;
 
 namespace TournamentManagerMobile
 {
@@ -17,17 +16,18 @@ namespace TournamentManagerMobile
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            Banner banner;
+          
 
             base.OnCreate(savedInstanceState);
-            StartAppSDK.Init(this, "202635783", true);
 
             SetContentView(Resource.Layout.createNewTournament);
 
-            IBannerListener bannerListener = new AdListener();
-            banner = FindViewById<Com.Startapp.Android.Publish.Banner.Banner>(Resource.Id.createTournamentBanner);
-            banner.ShowBanner();
-            banner.SetBannerListener(bannerListener);
+            var id = "ca-app-pub-5385963311823976~5875287959";
+            Android.Gms.Ads.MobileAds.Initialize(ApplicationContext, id);
+            var adView = FindViewById<AdView>(Resource.Id.adViewCNT);
+            var adRequest = new AdRequest.Builder().Build();
+            adView.LoadAd(adRequest);
+
 
             string dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "TournamentManagerDB.db3");
             SQLiteConnection db = new SQLiteConnection(dbPath);

@@ -5,6 +5,7 @@ using System.Text;
 
 using Android.App;
 using Android.Content;
+using Android.Gms.Ads;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
@@ -23,6 +24,12 @@ namespace TournamentManagerMobile.Activities
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.clubsLayout);
+
+            var id = "ca-app-pub-5385963311823976~5875287959";
+            Android.Gms.Ads.MobileAds.Initialize(ApplicationContext, id);
+            var adView = FindViewById<AdView>(Resource.Id.adViewCL);
+            var adRequest = new AdRequest.Builder().Build();
+            adView.LoadAd(adRequest);
 
             ListView clubListView = FindViewById<ListView>(Resource.Id.clubListView);
             Button addButton = FindViewById<Button>(Resource.Id.addClubButton);

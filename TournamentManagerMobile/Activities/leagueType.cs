@@ -88,7 +88,30 @@ namespace TournamentManagerMobile.Activities
             {
                 numOfRounds = item.numOfRounds;
             }
-            
+
+
+            List<string> all = new List<string>();
+            List<tournament> getInfo = connection.db.Query<tournament>("SELECT * FROM tournament ");
+            foreach (var item in getInfo)
+            {
+                all.Add(item.name);
+            }
+            if (all.Count <= 1 && checkExistingMatches(tournamentID).Count < 1)
+            {
+                AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+                dialog.SetTitle("Rules and instructions");
+                dialog.SetMessage("Press 'start first match' to get first opponents and so you can set score. After you get first match and set score, press 'apply result' to save your score." +
+                    " After that, you press 'next match' for every next match and 'apply result' for every result. You can see upfront who is playing against who and in which order in 'All fixtures and results'." +
+                    "If you would like to add goalscorers, you can do it in 'Add goal scorers' (optional). After tournament is over you will receive message saying who won. You can also check that in 'Winner'. " +
+                    "For win you get 3 points, for draw 1 point and if you lose you get 0 points. Every team face each team once or twice (depends on create tournament settings)");
+                dialog.SetPositiveButton("I understand, continue", (senderAlert, args) =>
+                {
+                    dialog.Dispose();
+                });
+
+                dialog.Show();
+            }
+
             int i1 = 0;
             int i2 = 0;
             int gamesPlayed = 0;
@@ -259,6 +282,8 @@ namespace TournamentManagerMobile.Activities
 
             draw.Click += delegate
             {
+                draw.Text = "Next match";
+
                 if (checkIftournamentIsOver(oddEven, checkExistingMatches(tournamentID)) && numOfRounds == "one")
                 {
                     Toast.MakeText(this, "This tournament is over.", ToastLength.Short).Show();

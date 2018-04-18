@@ -2223,26 +2223,26 @@ namespace TournamentManagerMobile
 			// aapt resource value: 0x7f020053
 			public const int avd_hide_password = 2130837587;
 			
-			// aapt resource value: 0x7f020120
-			public const int avd_hide_password_1 = 2130837792;
-			
 			// aapt resource value: 0x7f020121
-			public const int avd_hide_password_2 = 2130837793;
+			public const int avd_hide_password_1 = 2130837793;
 			
 			// aapt resource value: 0x7f020122
-			public const int avd_hide_password_3 = 2130837794;
+			public const int avd_hide_password_2 = 2130837794;
+			
+			// aapt resource value: 0x7f020123
+			public const int avd_hide_password_3 = 2130837795;
 			
 			// aapt resource value: 0x7f020054
 			public const int avd_show_password = 2130837588;
 			
-			// aapt resource value: 0x7f020123
-			public const int avd_show_password_1 = 2130837795;
-			
 			// aapt resource value: 0x7f020124
-			public const int avd_show_password_2 = 2130837796;
+			public const int avd_show_password_1 = 2130837796;
 			
 			// aapt resource value: 0x7f020125
-			public const int avd_show_password_3 = 2130837797;
+			public const int avd_show_password_2 = 2130837797;
+			
+			// aapt resource value: 0x7f020126
+			public const int avd_show_password_3 = 2130837798;
 			
 			// aapt resource value: 0x7f020055
 			public const int calendar1055101 = 2130837589;
@@ -2823,11 +2823,11 @@ namespace TournamentManagerMobile
 			// aapt resource value: 0x7f020115
 			public const int notification_icon_background = 2130837781;
 			
-			// aapt resource value: 0x7f02011e
-			public const int notification_template_icon_bg = 2130837790;
-			
 			// aapt resource value: 0x7f02011f
-			public const int notification_template_icon_low_bg = 2130837791;
+			public const int notification_template_icon_bg = 2130837791;
+			
+			// aapt resource value: 0x7f020120
+			public const int notification_template_icon_low_bg = 2130837792;
 			
 			// aapt resource value: 0x7f020116
 			public const int notification_tile_bg = 2130837782;
@@ -2839,19 +2839,22 @@ namespace TournamentManagerMobile
 			public const int person = 2130837784;
 			
 			// aapt resource value: 0x7f020119
-			public const int statist2125613 = 2130837785;
+			public const int qq1814114 = 2130837785;
 			
 			// aapt resource value: 0x7f02011a
-			public const int statLarger2125613 = 2130837786;
+			public const int statist2125613 = 2130837786;
 			
 			// aapt resource value: 0x7f02011b
-			public const int team2473778 = 2130837787;
+			public const int statLarger2125613 = 2130837787;
 			
 			// aapt resource value: 0x7f02011c
-			public const int team6502473778 = 2130837788;
+			public const int team2473778 = 2130837788;
 			
 			// aapt resource value: 0x7f02011d
-			public const int webapp02894861 = 2130837789;
+			public const int team6502473778 = 2130837789;
+			
+			// aapt resource value: 0x7f02011e
+			public const int webapp02894861 = 2130837790;
 			
 			static Drawable()
 			{
@@ -2866,14 +2869,14 @@ namespace TournamentManagerMobile
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f0b0146
-			public const int ClubName = 2131427654;
+			// aapt resource value: 0x7f0b0147
+			public const int ClubName = 2131427655;
 			
-			// aapt resource value: 0x7f0b013c
-			public const int LabelName = 2131427644;
+			// aapt resource value: 0x7f0b013d
+			public const int LabelName = 2131427645;
 			
-			// aapt resource value: 0x7f0b0125
-			public const int Name = 2131427621;
+			// aapt resource value: 0x7f0b0126
+			public const int Name = 2131427622;
 			
 			// aapt resource value: 0x7f0b00b7
 			public const int Player2textView = 2131427511;
@@ -2881,11 +2884,11 @@ namespace TournamentManagerMobile
 			// aapt resource value: 0x7f0b00ab
 			public const int Player2textViewKnockout = 2131427499;
 			
-			// aapt resource value: 0x7f0b00c6
-			public const int aboutButton = 2131427526;
+			// aapt resource value: 0x7f0b00c7
+			public const int aboutButton = 2131427527;
 			
-			// aapt resource value: 0x7f0b00e7
-			public const int action0 = 2131427559;
+			// aapt resource value: 0x7f0b00e8
+			public const int action0 = 2131427560;
 			
 			// aapt resource value: 0x7f0b0064
 			public const int action_bar = 2131427428;
@@ -2908,17 +2911,17 @@ namespace TournamentManagerMobile
 			// aapt resource value: 0x7f0b0041
 			public const int action_bar_title = 2131427393;
 			
-			// aapt resource value: 0x7f0b00e4
-			public const int action_container = 2131427556;
+			// aapt resource value: 0x7f0b00e5
+			public const int action_container = 2131427557;
 			
 			// aapt resource value: 0x7f0b0065
 			public const int action_context_bar = 2131427429;
 			
-			// aapt resource value: 0x7f0b00eb
-			public const int action_divider = 2131427563;
+			// aapt resource value: 0x7f0b00ec
+			public const int action_divider = 2131427564;
 			
-			// aapt resource value: 0x7f0b00e5
-			public const int action_image = 2131427557;
+			// aapt resource value: 0x7f0b00e6
+			public const int action_image = 2131427558;
 			
 			// aapt resource value: 0x7f0b0003
 			public const int action_menu_divider = 2131427331;
@@ -2935,17 +2938,17 @@ namespace TournamentManagerMobile
 			// aapt resource value: 0x7f0b0043
 			public const int action_mode_close_button = 2131427395;
 			
-			// aapt resource value: 0x7f0b00e6
-			public const int action_text = 2131427558;
+			// aapt resource value: 0x7f0b00e7
+			public const int action_text = 2131427559;
 			
-			// aapt resource value: 0x7f0b00f4
-			public const int actions = 2131427572;
+			// aapt resource value: 0x7f0b00f5
+			public const int actions = 2131427573;
 			
 			// aapt resource value: 0x7f0b0044
 			public const int activity_chooser_view_content = 2131427396;
 			
-			// aapt resource value: 0x7f0b00c7
-			public const int adView = 2131427527;
+			// aapt resource value: 0x7f0b00c8
+			public const int adView = 2131427528;
 			
 			// aapt resource value: 0x7f0b0084
 			public const int adViewAFAR = 2131427460;
@@ -2968,23 +2971,23 @@ namespace TournamentManagerMobile
 			// aapt resource value: 0x7f0b0098
 			public const int adViewCNT = 2131427480;
 			
-			// aapt resource value: 0x7f0b00e3
-			public const int adViewMT = 2131427555;
+			// aapt resource value: 0x7f0b00e4
+			public const int adViewMT = 2131427556;
 			
-			// aapt resource value: 0x7f0b0121
-			public const int adViewS = 2131427617;
+			// aapt resource value: 0x7f0b0122
+			public const int adViewS = 2131427618;
 			
-			// aapt resource value: 0x7f0b012d
-			public const int adViewT = 2131427629;
+			// aapt resource value: 0x7f0b012e
+			public const int adViewT = 2131427630;
 			
-			// aapt resource value: 0x7f0b0137
-			public const int adViewTS = 2131427639;
+			// aapt resource value: 0x7f0b0138
+			public const int adViewTS = 2131427640;
 			
-			// aapt resource value: 0x7f0b013a
-			public const int adViewW = 2131427642;
+			// aapt resource value: 0x7f0b013b
+			public const int adViewW = 2131427643;
 			
-			// aapt resource value: 0x7f0b0140
-			public const int adViewWAT = 2131427648;
+			// aapt resource value: 0x7f0b0141
+			public const int adViewWAT = 2131427649;
 			
 			// aapt resource value: 0x7f0b001e
 			public const int add = 2131427358;
@@ -3022,17 +3025,17 @@ namespace TournamentManagerMobile
 			// aapt resource value: 0x7f0b0085
 			public const int allPlayersLV = 2131427461;
 			
-			// aapt resource value: 0x7f0b0142
-			public const int allTimeClub = 2131427650;
-			
-			// aapt resource value: 0x7f0b0141
-			public const int allTimeName = 2131427649;
-			
 			// aapt resource value: 0x7f0b0143
-			public const int allTimeTournamentName = 2131427651;
+			public const int allTimeClub = 2131427651;
 			
-			// aapt resource value: 0x7f0b00c5
-			public const int allTimeWinnersButton = 2131427525;
+			// aapt resource value: 0x7f0b0142
+			public const int allTimeName = 2131427650;
+			
+			// aapt resource value: 0x7f0b0144
+			public const int allTimeTournamentName = 2131427652;
+			
+			// aapt resource value: 0x7f0b00c6
+			public const int allTimeWinnersButton = 2131427526;
 			
 			// aapt resource value: 0x7f0b0023
 			public const int always = 2131427363;
@@ -3046,11 +3049,11 @@ namespace TournamentManagerMobile
 			// aapt resource value: 0x7f0b002f
 			public const int auto = 2131427375;
 			
-			// aapt resource value: 0x7f0b0118
-			public const int awayGoalsStat = 2131427608;
+			// aapt resource value: 0x7f0b0119
+			public const int awayGoalsStat = 2131427609;
 			
-			// aapt resource value: 0x7f0b0117
-			public const int awayGoalsStatLabel = 2131427607;
+			// aapt resource value: 0x7f0b0118
+			public const int awayGoalsStatLabel = 2131427608;
 			
 			// aapt resource value: 0x7f0b0020
 			public const int beginning = 2131427360;
@@ -3061,8 +3064,11 @@ namespace TournamentManagerMobile
 			// aapt resource value: 0x7f0b004b
 			public const int buttonPanel = 2131427403;
 			
-			// aapt resource value: 0x7f0b00e8
-			public const int cancel_action = 2131427560;
+			// aapt resource value: 0x7f0b00c3
+			public const int buttonRules = 2131427523;
+			
+			// aapt resource value: 0x7f0b00e9
+			public const int cancel_action = 2131427561;
 			
 			// aapt resource value: 0x7f0b0030
 			public const int center = 2131427376;
@@ -3076,8 +3082,8 @@ namespace TournamentManagerMobile
 			// aapt resource value: 0x7f0b005b
 			public const int checkbox = 2131427419;
 			
-			// aapt resource value: 0x7f0b00f0
-			public const int chronometer = 2131427568;
+			// aapt resource value: 0x7f0b00f1
+			public const int chronometer = 2131427569;
 			
 			// aapt resource value: 0x7f0b0039
 			public const int clip_horizontal = 2131427385;
@@ -3085,8 +3091,8 @@ namespace TournamentManagerMobile
 			// aapt resource value: 0x7f0b003a
 			public const int clip_vertical = 2131427386;
 			
-			// aapt resource value: 0x7f0b011f
-			public const int clubButton = 2131427615;
+			// aapt resource value: 0x7f0b0120
+			public const int clubButton = 2131427616;
 			
 			// aapt resource value: 0x7f0b0090
 			public const int clubListView = 2131427472;
@@ -3109,17 +3115,17 @@ namespace TournamentManagerMobile
 			// aapt resource value: 0x7f0b009c
 			public const int coordinator = 2131427484;
 			
-			// aapt resource value: 0x7f0b00c3
-			public const int createTournamentButton = 2131427523;
+			// aapt resource value: 0x7f0b00c4
+			public const int createTournamentButton = 2131427524;
+			
+			// aapt resource value: 0x7f0b00ff
+			public const int currentClub = 2131427583;
 			
 			// aapt resource value: 0x7f0b00fe
-			public const int currentClub = 2131427582;
+			public const int currentClubLabel = 2131427582;
 			
 			// aapt resource value: 0x7f0b00fd
-			public const int currentClubLabel = 2131427581;
-			
-			// aapt resource value: 0x7f0b00fc
-			public const int currentPlayerName = 2131427580;
+			public const int currentPlayerName = 2131427581;
 			
 			// aapt resource value: 0x7f0b0055
 			public const int custom = 2131427413;
@@ -3163,8 +3169,8 @@ namespace TournamentManagerMobile
 			// aapt resource value: 0x7f0b0021
 			public const int end = 2131427361;
 			
-			// aapt resource value: 0x7f0b00fa
-			public const int end_padder = 2131427578;
+			// aapt resource value: 0x7f0b00fb
+			public const int end_padder = 2131427579;
 			
 			// aapt resource value: 0x7f0b002a
 			public const int enterAlways = 2131427370;
@@ -3196,74 +3202,74 @@ namespace TournamentManagerMobile
 			// aapt resource value: 0x7f0b0083
 			public const int fixturesList = 2131427459;
 			
-			// aapt resource value: 0x7f0b010c
-			public const int gamesDrawStat = 2131427596;
-			
-			// aapt resource value: 0x7f0b010b
-			public const int gamesDrawStatLabel = 2131427595;
-			
-			// aapt resource value: 0x7f0b010e
-			public const int gamesLostStat = 2131427598;
-			
 			// aapt resource value: 0x7f0b010d
-			public const int gamesLostStatLabel = 2131427597;
+			public const int gamesDrawStat = 2131427597;
 			
-			// aapt resource value: 0x7f0b0130
-			public const int gamesPlayed = 2131427632;
-			
-			// aapt resource value: 0x7f0b0106
-			public const int gamesPlayedStat = 2131427590;
-			
-			// aapt resource value: 0x7f0b0105
-			public const int gamesPlayedStatLabel = 2131427589;
-			
-			// aapt resource value: 0x7f0b010a
-			public const int gamesWonStat = 2131427594;
-			
-			// aapt resource value: 0x7f0b0109
-			public const int gamesWonStatLabel = 2131427593;
-			
-			// aapt resource value: 0x7f0b0133
-			public const int goalDiference = 2131427635;
-			
-			// aapt resource value: 0x7f0b0114
-			public const int goalDiferenceStat = 2131427604;
-			
-			// aapt resource value: 0x7f0b0113
-			public const int goalDiferenceStatLabel = 2131427603;
-			
-			// aapt resource value: 0x7f0b0112
-			public const int goalsAgainstStat = 2131427602;
-			
-			// aapt resource value: 0x7f0b0111
-			public const int goalsAgainstStatLabel = 2131427601;
-			
-			// aapt resource value: 0x7f0b0134
-			public const int goalsHome = 2131427636;
-			
-			// aapt resource value: 0x7f0b011a
-			public const int goalsPerMatchStat = 2131427610;
-			
-			// aapt resource value: 0x7f0b0119
-			public const int goalsPerMatchStatLabel = 2131427609;
-			
-			// aapt resource value: 0x7f0b0132
-			public const int goalsReceived = 2131427634;
-			
-			// aapt resource value: 0x7f0b011c
-			public const int goalsReceivedPerMatchStat = 2131427612;
-			
-			// aapt resource value: 0x7f0b011b
-			public const int goalsReceivedPerMatchStatLabel = 2131427611;
-			
-			// aapt resource value: 0x7f0b0131
-			public const int goalsScored = 2131427633;
-			
-			// aapt resource value: 0x7f0b0110
-			public const int goalsScoredStat = 2131427600;
+			// aapt resource value: 0x7f0b010c
+			public const int gamesDrawStatLabel = 2131427596;
 			
 			// aapt resource value: 0x7f0b010f
-			public const int goalsScoredStatLabel = 2131427599;
+			public const int gamesLostStat = 2131427599;
+			
+			// aapt resource value: 0x7f0b010e
+			public const int gamesLostStatLabel = 2131427598;
+			
+			// aapt resource value: 0x7f0b0131
+			public const int gamesPlayed = 2131427633;
+			
+			// aapt resource value: 0x7f0b0107
+			public const int gamesPlayedStat = 2131427591;
+			
+			// aapt resource value: 0x7f0b0106
+			public const int gamesPlayedStatLabel = 2131427590;
+			
+			// aapt resource value: 0x7f0b010b
+			public const int gamesWonStat = 2131427595;
+			
+			// aapt resource value: 0x7f0b010a
+			public const int gamesWonStatLabel = 2131427594;
+			
+			// aapt resource value: 0x7f0b0134
+			public const int goalDiference = 2131427636;
+			
+			// aapt resource value: 0x7f0b0115
+			public const int goalDiferenceStat = 2131427605;
+			
+			// aapt resource value: 0x7f0b0114
+			public const int goalDiferenceStatLabel = 2131427604;
+			
+			// aapt resource value: 0x7f0b0113
+			public const int goalsAgainstStat = 2131427603;
+			
+			// aapt resource value: 0x7f0b0112
+			public const int goalsAgainstStatLabel = 2131427602;
+			
+			// aapt resource value: 0x7f0b0135
+			public const int goalsHome = 2131427637;
+			
+			// aapt resource value: 0x7f0b011b
+			public const int goalsPerMatchStat = 2131427611;
+			
+			// aapt resource value: 0x7f0b011a
+			public const int goalsPerMatchStatLabel = 2131427610;
+			
+			// aapt resource value: 0x7f0b0133
+			public const int goalsReceived = 2131427635;
+			
+			// aapt resource value: 0x7f0b011d
+			public const int goalsReceivedPerMatchStat = 2131427613;
+			
+			// aapt resource value: 0x7f0b011c
+			public const int goalsReceivedPerMatchStatLabel = 2131427612;
+			
+			// aapt resource value: 0x7f0b0132
+			public const int goalsScored = 2131427634;
+			
+			// aapt resource value: 0x7f0b0111
+			public const int goalsScoredStat = 2131427601;
+			
+			// aapt resource value: 0x7f0b0110
+			public const int goalsScoredStatLabel = 2131427600;
 			
 			// aapt resource value: 0x7f0b0005
 			public const int home = 2131427333;
@@ -3271,17 +3277,17 @@ namespace TournamentManagerMobile
 			// aapt resource value: 0x7f0b0013
 			public const int homeAsUp = 2131427347;
 			
-			// aapt resource value: 0x7f0b0116
-			public const int homeGoalsStat = 2131427606;
+			// aapt resource value: 0x7f0b0117
+			public const int homeGoalsStat = 2131427607;
 			
-			// aapt resource value: 0x7f0b0115
-			public const int homeGoalsStatLabel = 2131427605;
+			// aapt resource value: 0x7f0b0116
+			public const int homeGoalsStatLabel = 2131427606;
 			
 			// aapt resource value: 0x7f0b0049
 			public const int icon = 2131427401;
 			
-			// aapt resource value: 0x7f0b00f5
-			public const int icon_group = 2131427573;
+			// aapt resource value: 0x7f0b00f6
+			public const int icon_group = 2131427574;
 			
 			// aapt resource value: 0x7f0b0025
 			public const int ifRoom = 2131427365;
@@ -3289,14 +3295,14 @@ namespace TournamentManagerMobile
 			// aapt resource value: 0x7f0b0046
 			public const int image = 2131427398;
 			
-			// aapt resource value: 0x7f0b0138
-			public const int imageButton1 = 2131427640;
+			// aapt resource value: 0x7f0b0139
+			public const int imageButton1 = 2131427641;
 			
 			// aapt resource value: 0x7f0b0074
 			public const int imageView1 = 2131427444;
 			
-			// aapt resource value: 0x7f0b00f1
-			public const int info = 2131427569;
+			// aapt resource value: 0x7f0b00f2
+			public const int info = 2131427570;
 			
 			// aapt resource value: 0x7f0b0000
 			public const int item_touch_helper_previous_elevation = 2131427328;
@@ -3304,38 +3310,38 @@ namespace TournamentManagerMobile
 			// aapt resource value: 0x7f0b00b3
 			public const int knockoutDraw = 2131427507;
 			
-			// aapt resource value: 0x7f0b0128
-			public const int labelDRAW = 2131427624;
+			// aapt resource value: 0x7f0b0129
+			public const int labelDRAW = 2131427625;
+			
+			// aapt resource value: 0x7f0b012b
+			public const int labelGD = 2131427627;
+			
+			// aapt resource value: 0x7f0b0127
+			public const int labelGP = 2131427623;
 			
 			// aapt resource value: 0x7f0b012a
-			public const int labelGD = 2131427626;
-			
-			// aapt resource value: 0x7f0b0126
-			public const int labelGP = 2131427622;
-			
-			// aapt resource value: 0x7f0b0129
-			public const int labelLOST = 2131427625;
+			public const int labelLOST = 2131427626;
 			
 			// aapt resource value: 0x7f0b0088
 			public const int labelNumOfPeople = 2131427464;
 			
-			// aapt resource value: 0x7f0b013d
-			public const int labelNumOfTimes = 2131427645;
-			
-			// aapt resource value: 0x7f0b013b
-			public const int labelOrd = 2131427643;
-			
-			// aapt resource value: 0x7f0b0124
-			public const int labelOrdNumber = 2131427620;
-			
-			// aapt resource value: 0x7f0b012b
-			public const int labelPTS = 2131427627;
-			
 			// aapt resource value: 0x7f0b013e
-			public const int labelTtournamentName = 2131427646;
+			public const int labelNumOfTimes = 2131427646;
 			
-			// aapt resource value: 0x7f0b0127
-			public const int labelWon = 2131427623;
+			// aapt resource value: 0x7f0b013c
+			public const int labelOrd = 2131427644;
+			
+			// aapt resource value: 0x7f0b0125
+			public const int labelOrdNumber = 2131427621;
+			
+			// aapt resource value: 0x7f0b012c
+			public const int labelPTS = 2131427628;
+			
+			// aapt resource value: 0x7f0b013f
+			public const int labelTtournamentName = 2131427647;
+			
+			// aapt resource value: 0x7f0b0128
+			public const int labelWon = 2131427624;
 			
 			// aapt resource value: 0x7f0b009a
 			public const int largeLabel = 2131427482;
@@ -3343,11 +3349,11 @@ namespace TournamentManagerMobile
 			// aapt resource value: 0x7f0b0034
 			public const int left = 2131427380;
 			
-			// aapt resource value: 0x7f0b00f6
-			public const int line1 = 2131427574;
+			// aapt resource value: 0x7f0b00f7
+			public const int line1 = 2131427575;
 			
-			// aapt resource value: 0x7f0b00f8
-			public const int line3 = 2131427576;
+			// aapt resource value: 0x7f0b00f9
+			public const int line3 = 2131427577;
 			
 			// aapt resource value: 0x7f0b007c
 			public const int linearLayout1 = 2131427452;
@@ -3355,35 +3361,35 @@ namespace TournamentManagerMobile
 			// aapt resource value: 0x7f0b000f
 			public const int listMode = 2131427343;
 			
-			// aapt resource value: 0x7f0b0100
-			public const int listOfTournaments = 2131427584;
+			// aapt resource value: 0x7f0b0101
+			public const int listOfTournaments = 2131427585;
 			
-			// aapt resource value: 0x7f0b0102
-			public const int listOfTournamentsWon = 2131427586;
+			// aapt resource value: 0x7f0b0103
+			public const int listOfTournamentsWon = 2131427587;
 			
-			// aapt resource value: 0x7f0b0139
-			public const int listOfWinners = 2131427641;
+			// aapt resource value: 0x7f0b013a
+			public const int listOfWinners = 2131427642;
 			
-			// aapt resource value: 0x7f0b013f
-			public const int listViewAllTime = 2131427647;
+			// aapt resource value: 0x7f0b0140
+			public const int listViewAllTime = 2131427648;
 			
 			// aapt resource value: 0x7f0b0080
 			public const int listViewPlayers = 2131427456;
 			
-			// aapt resource value: 0x7f0b00e2
-			public const int listViewTournaments = 2131427554;
+			// aapt resource value: 0x7f0b00e3
+			public const int listViewTournaments = 2131427555;
 			
 			// aapt resource value: 0x7f0b0048
 			public const int list_item = 2131427400;
 			
-			// aapt resource value: 0x7f0b0148
-			public const int masked = 2131427656;
+			// aapt resource value: 0x7f0b0149
+			public const int masked = 2131427657;
 			
 			// aapt resource value: 0x7f0b0073
 			public const int mediaController1 = 2131427443;
 			
-			// aapt resource value: 0x7f0b00ea
-			public const int media_actions = 2131427562;
+			// aapt resource value: 0x7f0b00eb
+			public const int media_actions = 2131427563;
 			
 			// aapt resource value: 0x7f0b0022
 			public const int middle = 2131427362;
@@ -3403,89 +3409,89 @@ namespace TournamentManagerMobile
 			// aapt resource value: 0x7f0b00b0
 			public const int minusIncrementP2Knockout = 2131427504;
 			
-			// aapt resource value: 0x7f0b00d4
-			public const int mr_art = 2131427540;
-			
-			// aapt resource value: 0x7f0b00c9
-			public const int mr_chooser_list = 2131427529;
-			
-			// aapt resource value: 0x7f0b00cc
-			public const int mr_chooser_route_desc = 2131427532;
+			// aapt resource value: 0x7f0b00d5
+			public const int mr_art = 2131427541;
 			
 			// aapt resource value: 0x7f0b00ca
-			public const int mr_chooser_route_icon = 2131427530;
-			
-			// aapt resource value: 0x7f0b00cb
-			public const int mr_chooser_route_name = 2131427531;
-			
-			// aapt resource value: 0x7f0b00c8
-			public const int mr_chooser_title = 2131427528;
-			
-			// aapt resource value: 0x7f0b00d1
-			public const int mr_close = 2131427537;
-			
-			// aapt resource value: 0x7f0b00d7
-			public const int mr_control_divider = 2131427543;
-			
-			// aapt resource value: 0x7f0b00dd
-			public const int mr_control_playback_ctrl = 2131427549;
-			
-			// aapt resource value: 0x7f0b00e0
-			public const int mr_control_subtitle = 2131427552;
-			
-			// aapt resource value: 0x7f0b00df
-			public const int mr_control_title = 2131427551;
-			
-			// aapt resource value: 0x7f0b00de
-			public const int mr_control_title_container = 2131427550;
-			
-			// aapt resource value: 0x7f0b00d2
-			public const int mr_custom_control = 2131427538;
-			
-			// aapt resource value: 0x7f0b00d3
-			public const int mr_default_control = 2131427539;
-			
-			// aapt resource value: 0x7f0b00ce
-			public const int mr_dialog_area = 2131427534;
+			public const int mr_chooser_list = 2131427530;
 			
 			// aapt resource value: 0x7f0b00cd
-			public const int mr_expandable_area = 2131427533;
+			public const int mr_chooser_route_desc = 2131427533;
 			
-			// aapt resource value: 0x7f0b00e1
-			public const int mr_group_expand_collapse = 2131427553;
+			// aapt resource value: 0x7f0b00cb
+			public const int mr_chooser_route_icon = 2131427531;
 			
-			// aapt resource value: 0x7f0b00d5
-			public const int mr_media_main_control = 2131427541;
+			// aapt resource value: 0x7f0b00cc
+			public const int mr_chooser_route_name = 2131427532;
 			
-			// aapt resource value: 0x7f0b00d0
-			public const int mr_name = 2131427536;
+			// aapt resource value: 0x7f0b00c9
+			public const int mr_chooser_title = 2131427529;
 			
-			// aapt resource value: 0x7f0b00d6
-			public const int mr_playback_control = 2131427542;
-			
-			// aapt resource value: 0x7f0b00cf
-			public const int mr_title_bar = 2131427535;
+			// aapt resource value: 0x7f0b00d2
+			public const int mr_close = 2131427538;
 			
 			// aapt resource value: 0x7f0b00d8
-			public const int mr_volume_control = 2131427544;
+			public const int mr_control_divider = 2131427544;
+			
+			// aapt resource value: 0x7f0b00de
+			public const int mr_control_playback_ctrl = 2131427550;
+			
+			// aapt resource value: 0x7f0b00e1
+			public const int mr_control_subtitle = 2131427553;
+			
+			// aapt resource value: 0x7f0b00e0
+			public const int mr_control_title = 2131427552;
+			
+			// aapt resource value: 0x7f0b00df
+			public const int mr_control_title_container = 2131427551;
+			
+			// aapt resource value: 0x7f0b00d3
+			public const int mr_custom_control = 2131427539;
+			
+			// aapt resource value: 0x7f0b00d4
+			public const int mr_default_control = 2131427540;
+			
+			// aapt resource value: 0x7f0b00cf
+			public const int mr_dialog_area = 2131427535;
+			
+			// aapt resource value: 0x7f0b00ce
+			public const int mr_expandable_area = 2131427534;
+			
+			// aapt resource value: 0x7f0b00e2
+			public const int mr_group_expand_collapse = 2131427554;
+			
+			// aapt resource value: 0x7f0b00d6
+			public const int mr_media_main_control = 2131427542;
+			
+			// aapt resource value: 0x7f0b00d1
+			public const int mr_name = 2131427537;
+			
+			// aapt resource value: 0x7f0b00d7
+			public const int mr_playback_control = 2131427543;
+			
+			// aapt resource value: 0x7f0b00d0
+			public const int mr_title_bar = 2131427536;
 			
 			// aapt resource value: 0x7f0b00d9
-			public const int mr_volume_group_list = 2131427545;
+			public const int mr_volume_control = 2131427545;
 			
-			// aapt resource value: 0x7f0b00db
-			public const int mr_volume_item_icon = 2131427547;
+			// aapt resource value: 0x7f0b00da
+			public const int mr_volume_group_list = 2131427546;
 			
 			// aapt resource value: 0x7f0b00dc
-			public const int mr_volume_slider = 2131427548;
+			public const int mr_volume_item_icon = 2131427548;
+			
+			// aapt resource value: 0x7f0b00dd
+			public const int mr_volume_slider = 2131427549;
 			
 			// aapt resource value: 0x7f0b0019
 			public const int multiply = 2131427353;
 			
-			// aapt resource value: 0x7f0b00c4
-			public const int myTournamentsButton = 2131427524;
+			// aapt resource value: 0x7f0b00c5
+			public const int myTournamentsButton = 2131427525;
 			
-			// aapt resource value: 0x7f0b012f
-			public const int name = 2131427631;
+			// aapt resource value: 0x7f0b0130
+			public const int name = 2131427632;
 			
 			// aapt resource value: 0x7f0b00a1
 			public const int navigation_header_container = 2131427489;
@@ -3505,14 +3511,14 @@ namespace TournamentManagerMobile
 			// aapt resource value: 0x7f0b0010
 			public const int normal = 2131427344;
 			
-			// aapt resource value: 0x7f0b00f3
-			public const int notification_background = 2131427571;
+			// aapt resource value: 0x7f0b00f4
+			public const int notification_background = 2131427572;
+			
+			// aapt resource value: 0x7f0b00ee
+			public const int notification_main_column = 2131427566;
 			
 			// aapt resource value: 0x7f0b00ed
-			public const int notification_main_column = 2131427565;
-			
-			// aapt resource value: 0x7f0b00ec
-			public const int notification_main_column_container = 2131427564;
+			public const int notification_main_column_container = 2131427565;
 			
 			// aapt resource value: 0x7f0b0076
 			public const int numOfGoalsText = 2131427446;
@@ -3520,20 +3526,20 @@ namespace TournamentManagerMobile
 			// aapt resource value: 0x7f0b0089
 			public const int numOfPeoplePlayed = 2131427465;
 			
-			// aapt resource value: 0x7f0b0108
-			public const int numOfPointsStat = 2131427592;
+			// aapt resource value: 0x7f0b0109
+			public const int numOfPointsStat = 2131427593;
 			
-			// aapt resource value: 0x7f0b0107
-			public const int numOfPointsStatLabel = 2131427591;
+			// aapt resource value: 0x7f0b0108
+			public const int numOfPointsStatLabel = 2131427592;
 			
 			// aapt resource value: 0x7f0b0096
 			public const int numOfRounds = 2131427478;
 			
-			// aapt resource value: 0x7f0b0144
-			public const int number = 2131427652;
+			// aapt resource value: 0x7f0b0145
+			public const int number = 2131427653;
 			
-			// aapt resource value: 0x7f0b012e
-			public const int ordNumber = 2131427630;
+			// aapt resource value: 0x7f0b012f
+			public const int ordNumber = 2131427631;
 			
 			// aapt resource value: 0x7f0b0037
 			public const int parallax = 2131427383;
@@ -3550,14 +3556,14 @@ namespace TournamentManagerMobile
 			// aapt resource value: 0x7f0b00aa
 			public const int player1TextViewKnockout = 2131427498;
 			
-			// aapt resource value: 0x7f0b0145
-			public const int playerName = 2131427653;
+			// aapt resource value: 0x7f0b0146
+			public const int playerName = 2131427654;
 			
-			// aapt resource value: 0x7f0b00fb
-			public const int playerNameLabel = 2131427579;
+			// aapt resource value: 0x7f0b00fc
+			public const int playerNameLabel = 2131427580;
 			
-			// aapt resource value: 0x7f0b011d
-			public const int playersBaseButton = 2131427613;
+			// aapt resource value: 0x7f0b011e
+			public const int playersBaseButton = 2131427614;
 			
 			// aapt resource value: 0x7f0b007a
 			public const int playersList = 2131427450;
@@ -3577,8 +3583,8 @@ namespace TournamentManagerMobile
 			// aapt resource value: 0x7f0b00af
 			public const int plusIncrementP2Knockout = 2131427503;
 			
-			// aapt resource value: 0x7f0b0135
-			public const int points = 2131427637;
+			// aapt resource value: 0x7f0b0136
+			public const int points = 2131427638;
 			
 			// aapt resource value: 0x7f0b0006
 			public const int progress_circular = 2131427334;
@@ -3589,8 +3595,8 @@ namespace TournamentManagerMobile
 			// aapt resource value: 0x7f0b005d
 			public const int radio = 2131427421;
 			
-			// aapt resource value: 0x7f0b0104
-			public const int refreshButton = 2131427588;
+			// aapt resource value: 0x7f0b0105
+			public const int refreshButton = 2131427589;
 			
 			// aapt resource value: 0x7f0b00c2
 			public const int resetLeagueTournament = 2131427522;
@@ -3610,17 +3616,17 @@ namespace TournamentManagerMobile
 			// aapt resource value: 0x7f0b0035
 			public const int right = 2131427381;
 			
-			// aapt resource value: 0x7f0b00f2
-			public const int right_icon = 2131427570;
+			// aapt resource value: 0x7f0b00f3
+			public const int right_icon = 2131427571;
 			
-			// aapt resource value: 0x7f0b00ee
-			public const int right_side = 2131427566;
+			// aapt resource value: 0x7f0b00ef
+			public const int right_side = 2131427567;
+			
+			// aapt resource value: 0x7f0b0124
+			public const int sample_content_fragment = 2131427620;
 			
 			// aapt resource value: 0x7f0b0123
-			public const int sample_content_fragment = 2131427619;
-			
-			// aapt resource value: 0x7f0b0122
-			public const int sample_main_layout = 2131427618;
+			public const int sample_main_layout = 2131427619;
 			
 			// aapt resource value: 0x7f0b0075
 			public const int scorerNameText = 2131427445;
@@ -3724,11 +3730,11 @@ namespace TournamentManagerMobile
 			// aapt resource value: 0x7f0b0081
 			public const int startTournamentButton = 2131427457;
 			
-			// aapt resource value: 0x7f0b0103
-			public const int statSpinner = 2131427587;
+			// aapt resource value: 0x7f0b0104
+			public const int statSpinner = 2131427588;
 			
-			// aapt resource value: 0x7f0b00e9
-			public const int status_bar_latest_event_content = 2131427561;
+			// aapt resource value: 0x7f0b00ea
+			public const int status_bar_latest_event_content = 2131427562;
 			
 			// aapt resource value: 0x7f0b005e
 			public const int submenuarrow = 2131427422;
@@ -3742,14 +3748,14 @@ namespace TournamentManagerMobile
 			// aapt resource value: 0x7f0b00bf
 			public const int tableButton = 2131427519;
 			
-			// aapt resource value: 0x7f0b012c
-			public const int tableList = 2131427628;
+			// aapt resource value: 0x7f0b012d
+			public const int tableList = 2131427629;
 			
-			// aapt resource value: 0x7f0b00f9
-			public const int text = 2131427577;
+			// aapt resource value: 0x7f0b00fa
+			public const int text = 2131427578;
 			
-			// aapt resource value: 0x7f0b00f7
-			public const int text2 = 2131427575;
+			// aapt resource value: 0x7f0b00f8
+			public const int text2 = 2131427576;
 			
 			// aapt resource value: 0x7f0b0052
 			public const int textSpacerNoButtons = 2131427410;
@@ -3766,8 +3772,8 @@ namespace TournamentManagerMobile
 			// aapt resource value: 0x7f0b0095
 			public const int textView3 = 2131427477;
 			
-			// aapt resource value: 0x7f0b0120
-			public const int textViewClubs = 2131427616;
+			// aapt resource value: 0x7f0b0121
+			public const int textViewClubs = 2131427617;
 			
 			// aapt resource value: 0x7f0b00a6
 			public const int text_input_password_toggle = 2131427494;
@@ -3778,8 +3784,8 @@ namespace TournamentManagerMobile
 			// aapt resource value: 0x7f0b000d
 			public const int textinput_error = 2131427341;
 			
-			// aapt resource value: 0x7f0b00ef
-			public const int time = 2131427567;
+			// aapt resource value: 0x7f0b00f0
+			public const int time = 2131427568;
 			
 			// aapt resource value: 0x7f0b004a
 			public const int title = 2131427402;
@@ -3796,11 +3802,11 @@ namespace TournamentManagerMobile
 			// aapt resource value: 0x7f0b0056
 			public const int topPanel = 2131427414;
 			
-			// aapt resource value: 0x7f0b011e
-			public const int topScorers = 2131427614;
+			// aapt resource value: 0x7f0b011f
+			public const int topScorers = 2131427615;
 			
-			// aapt resource value: 0x7f0b0136
-			public const int topScorersLV = 2131427638;
+			// aapt resource value: 0x7f0b0137
+			public const int topScorersLV = 2131427639;
 			
 			// aapt resource value: 0x7f0b009d
 			public const int touch_outside = 2131427485;
@@ -3808,11 +3814,11 @@ namespace TournamentManagerMobile
 			// aapt resource value: 0x7f0b0094
 			public const int tournamentType = 2131427476;
 			
-			// aapt resource value: 0x7f0b00ff
-			public const int tournamentsLabel = 2131427583;
+			// aapt resource value: 0x7f0b0100
+			public const int tournamentsLabel = 2131427584;
 			
-			// aapt resource value: 0x7f0b0101
-			public const int tournamentsWonLabel = 2131427585;
+			// aapt resource value: 0x7f0b0102
+			public const int tournamentsWonLabel = 2131427586;
 			
 			// aapt resource value: 0x7f0b000a
 			public const int transition_current_scene = 2131427338;
@@ -3832,11 +3838,11 @@ namespace TournamentManagerMobile
 			// aapt resource value: 0x7f0b00a8
 			public const int viewpager = 2131427496;
 			
-			// aapt resource value: 0x7f0b0147
-			public const int visible = 2131427655;
+			// aapt resource value: 0x7f0b0148
+			public const int visible = 2131427656;
 			
-			// aapt resource value: 0x7f0b00da
-			public const int volume_item_container = 2131427546;
+			// aapt resource value: 0x7f0b00db
+			public const int volume_item_container = 2131427547;
 			
 			// aapt resource value: 0x7f0b00c1
 			public const int winnersButton = 2131427521;

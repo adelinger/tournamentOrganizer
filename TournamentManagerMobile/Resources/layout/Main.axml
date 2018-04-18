@@ -20,7 +20,7 @@
         android:backgroundTint="#ff2c3e50"
         android:textColor="@android:color/background_light" />
     <Button
-        android:text="        My tournaments        "
+        android:text="My tournaments"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/myTournamentsButton"
@@ -30,7 +30,7 @@
         android:textColor="@android:color/background_light"
         android:backgroundTint="#ff2c3e50" />
     <Button
-        android:text="       All time winners         "
+        android:text="All time winners"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/allTimeWinnersButton"
@@ -53,6 +53,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         ads:adSize="SMART_BANNER"
-        ads:adUnitId="@string/banner_ad_unit_id"
+        ads:adUnitId="ca-app-pub-5385963311823976/6913037454"
         android:layout_weight="0.1" />
 </LinearLayout>

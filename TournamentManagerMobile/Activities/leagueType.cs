@@ -7,6 +7,7 @@ using System.Text;
 using Android.App;
 using Android.Content;
 using Android.Gms.Ads;
+using Android.Graphics;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
@@ -58,12 +59,15 @@ namespace TournamentManagerMobile.Activities
             TextView resultP2       = FindViewById<TextView>(Resource.Id.result2);
             TextView player1        = FindViewById<TextView>(Resource.Id.player1TextView);
             TextView player2        = FindViewById<TextView>(Resource.Id.Player2textView);
+            Button rulesButton = FindViewById<Button>(Resource.Id.buttonRules);
 
             int tournamentID      = 0;
             apply.Enabled = false;
             string oddEven = "";
             bool firstTimeClicked = true;
             bool allGood = true;
+
+            draw.SetBackgroundColor(Color.MidnightBlue);
 
             string tournamentName = Intent.GetStringExtra("tournamentName");
             this.Title = tournamentName + " " + "league";
@@ -100,9 +104,9 @@ namespace TournamentManagerMobile.Activities
             {
                 AlertDialog.Builder dialog = new AlertDialog.Builder(this);
                 dialog.SetTitle("Rules and instructions");
-                dialog.SetMessage("Press 'start first match' to get first opponents and so you can set score. After you get first match and set score, press 'apply result' to save your score." +
-                    " After that, you press 'next match' for every next match and 'apply result' for every result. You can see upfront who is playing against who and in which order in 'All fixtures and results'." +
-                    "If you would like to add goalscorers, you can do it in 'Add goal scorers' (optional). After tournament is over you will receive message saying who won. You can also check that in 'Winner'. " +
+                dialog.SetMessage("Press 'Start match' to get first opponents. After you get players for the first match, you can set score by pressing 'Apply result'." +
+                    "After saving result, you have to press 'next match' to get next opponents. You can see upfront who is playing against who and in which order in 'All fixtures and results'." +
+                    "If you would like to add goalscorers, you can do so in 'Add goal scorers' (optional). After tournament is over you will receive message saying who won. You can also check that in 'Winner'. " +
                     "For win you get 3 points, for draw 1 point and if you lose you get 0 points. Every team face each team once or twice (depends on create tournament settings)");
                 dialog.SetPositiveButton("I understand, continue", (senderAlert, args) =>
                 {
@@ -175,10 +179,28 @@ namespace TournamentManagerMobile.Activities
                     connection.db.Insert(startingPoints);
                 }
             }
+
+            rulesButton.Click += delegate
+            {
+                AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+                dialog.SetTitle("Rules and instructions");
+                dialog.SetMessage("Press 'Start match' to get first opponents. After you get players for the first match, you can set score by pressing 'Apply result'." +
+                    "After saving result, you have to press 'next match' to get next opponents. You can see upfront who is playing against who and in which order in 'All fixtures and results'." +
+                    "If you would like to add goalscorers, you can do so in 'Add goal scorers' (optional). After tournament is over you will receive message saying who won. You can also check that in 'Winner'. " +
+                    "For win you get 3 points, for draw 1 point and if you lose you get 0 points. Every team face each team once or twice (depends on create tournament settings)");
+                dialog.SetPositiveButton("I understand", (senderAlert, args) =>
+                {
+                    dialog.Dispose();
+                });
+
+                dialog.Show();
+            };
            
 
             apply.Click += delegate
             {
+                    draw.SetBackgroundColor(Color.MidnightBlue);
+                    apply.SetBackgroundColor(Color.Gray);
                     connection.db.Execute("INSERT INTO results (homePlayerName, awayPlayerName, homeGoals, awayGoals, tournamentID)" +
                     " values ('" + player1.Text + "', '" + player2.Text + "', '" + resultP1.Text + "', '" + resultP2.Text + "', '" + tournamentID + "')");
                    
@@ -269,6 +291,7 @@ namespace TournamentManagerMobile.Activities
                     Toast.MakeText(this, "The tournament is over. Congratulations to the winner '"+theWinner[0]+"' ", ToastLength.Short).Show();
                     connection.db.Execute("INSERT INTO winners (personName, clubName, tournamentName) VALUES ('" + theWinner[0] + "', '" + theWinnerClub + "', '" + tournamentName + "') ");
                     draw.Enabled = false;
+                    draw.SetBackgroundColor(Color.Gray);
                     return;                 
                 }
                 if (checkIfTournamentIsOverTwoRounds(oddEven, checkExistingMatches(tournamentID)) && numOfRounds == "two")
@@ -276,25 +299,32 @@ namespace TournamentManagerMobile.Activities
                     Toast.MakeText(this, "The tournament is over. Congratulations to the winner '" + theWinner[0] + "' ", ToastLength.Short).Show();
                     connection.db.Execute("INSERT INTO winners (personName, clubName, tournamentName) VALUES ('" + theWinner[0] + "', '" + theWinnerClub + "', '" + tournamentName + "') ");
                     draw.Enabled = false;
+                    draw.SetBackgroundColor(Color.Gray);
                     return;
                 }
             };
 
             draw.Click += delegate
             {
+              
                 draw.Text = "Next match";
 
                 if (checkIftournamentIsOver(oddEven, checkExistingMatches(tournamentID)) && numOfRounds == "one")
                 {
                     Toast.MakeText(this, "This tournament is over.", ToastLength.Short).Show();
+                    draw.SetBackgroundColor(Color.Gray);
                     return;
                 }
 
                 if (checkIfTournamentIsOverTwoRounds(oddEven, checkExistingMatches(tournamentID)) && numOfRounds == "two")
                 {
                     Toast.MakeText(this, "This tournament is over.", ToastLength.Short).Show();
+                    draw.SetBackgroundColor(Color.Gray);
                     return;
                 }
+
+                apply.SetBackgroundColor(Color.MidnightBlue);
+                draw.SetBackgroundColor(Color.Gray);
 
                 if (numOfRounds == "one")
                 {

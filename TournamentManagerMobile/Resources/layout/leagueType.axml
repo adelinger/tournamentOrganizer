@@ -90,7 +90,7 @@
         android:layout_below="@id/minusIncrement"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Start first match"
+        android:text="Start match"
         android:background="#2c3e50"
         android:layout_marginTop="20dip"
         android:textColor="@android:color/background_light"
@@ -101,8 +101,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Apply result"
-        android:background="#2c3e50"
-        android:layout_marginLeft="250dip"
+        android:background="#808080"
+        android:layout_marginLeft="230dip"
         android:layout_marginTop="20dip"
         android:textColor="@android:color/background_light" />
     <Button
@@ -158,4 +158,11 @@
         android:id="@+id/textView1"
         android:layout_height="wrap_content"
         android:gravity="center" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/winnersButton"
+        android:id="@+id/buttonRules"
+        android:layout_marginTop="10dip"
+        android:background="@drawable/qq1814114" />
 </RelativeLayout>
